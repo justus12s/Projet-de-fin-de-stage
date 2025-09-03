@@ -4,6 +4,11 @@ Gestion d'une bibliothèque en ligne
 ## Modifications récentes
 
 ------------------------------------------------------------------------------------------------------------------
+- Mise en place du Dépôt Github 
+
+**Contributeur de ces modifications : Justus BONOU**
+
+------------------------------------------------------------------------------------------------------------------
 - J'ai créé les fichiers suivant :
     * index.html ,
     * connexion.html ,
