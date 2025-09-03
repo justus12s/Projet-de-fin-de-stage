@@ -16,6 +16,7 @@ Gestion d'une bibliothèque en ligne
 Conclusion : C'est donnée le top au déroulement du projet...
 
 **Contributeur de ces modifications : Josué AGBODO**
+
 -----------------------------------------------------------------------------------------------------------------
 - J'ai réarrangé la page d'accueil, la barre de navigation et le footer, le tout avec **Bootstrap** et quelque lignes de script css pour un rendu moderne et responsive
 - J'ai créé un nouveau fichier 'nav_footer.css' pour le CSS de la navbar et du footer, afin de mieux organiser le style commun à toutes les pages.
@@ -26,3 +27,5 @@ Conclusion : C'est donnée le top au déroulement du projet...
 - Creation d'un nouveau fichier guie_user.txt qui contient le contenue de la nouvelle page guide_utilisateur.html.
 
 **Contributeur de ces modifications : Abel KPOKOUTA**
+
+---------------------------------------------------------------------------------------------------------------
