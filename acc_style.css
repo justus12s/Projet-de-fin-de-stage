@@ -1,81 +1,53 @@
-body{
-    background-color: skyblue;
-}
-header{
-   background-color: white;
-   
+*{
+    margin: 0;
+    padding: 0;
 }
 
-
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5em;
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background-attachment: fixed;
 }
-
-.barre_a{
+.card {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+.avis {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba(106,17,203,0.08);
+    padding: 24px;
+    min-height: 220px;
+}
+.sign {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 12px rgba(106,17,203,0.08);
+}
+.inscrit {
+    background: #fff;
+    color: #6a11cb;
+    font-weight: bold;
+    border-radius: 1.5rem;
+    padding: 12px 32px;
+    margin-top: 12px;
+    transition: background 0.2s, color 0.2s;
+    border: none;
+    text-decoration: none;
     display: inline-block;
-    margin: 10px;
 }
-
-.logo_im{
-    width: 80px;
-    height: auto;
+.inscrit:hover {
+    background: #2575fc;
+    color: #fff;
 }
-.new_books{
-    display: flex;
-    flex-direction: row;
+@media (max-width: 600px) {
+    .card-img-top {
+        height: 140px;
+    }
 }
-.livre{
-    width: 100px;
-    height: 100pxs;
-    background-color: #d1d5db;
-}
-.conteneur{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 2em;
-
-}
-
-.avis{
-    background-color: #f9fafb;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 15px 0;
-    font-family: Arial, Helvetica, sans-serif;
-
-}
-
-.sign{
-    background-color: blueviolet;
-    text-align: center;
-    border-radius: 20px;
-    color: white;
-}
-
-.inscrit{
-    display: inline-block;
-    background-color: white;
-    color: blueviolet;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 10px;
-    margin: auto;
-    border-radius: 20px;
-    padding-bottom: 10px;
-
-
-}
-
-
-footer{
-    background-color: #1f2137;
-    color: #d1d5db;
-    margin-top: auto;
-    text-align: center;
-    
-}
-
-
