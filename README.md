@@ -12,7 +12,7 @@ Gestion d'une bibliothèque en ligne
     * catalogue.html , 
     * acc_style.css ,
 
-- J'ai aussi créé le dossier images qui contient les images des livres(books).
+- J'ai aussi créé le dossier **images** qui contient les images des livres(books).
 Conclusion : C'est donnée le top au déroulement du projet...
 
 **Contributeur de ces modifications : Josué AGBODO**
