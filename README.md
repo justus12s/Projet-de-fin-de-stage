@@ -8,4 +8,4 @@ Gestion d'une bibliothèque en ligne
 - J'ai aussi créé le fichier 'livre_description.html' pour afficher la description des livres (nom d'auteur, nombre de pages, résumé du livre).
 - J'ai aussi ajouté une nouvelle image du livre d'Harry Potter.
 
-## Dev full stack (Abel KPOKOUTA)
+** Contributeur de ces modifications : Abel KPOKOUTA **
