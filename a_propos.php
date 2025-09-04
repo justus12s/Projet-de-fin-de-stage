@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Bibliothèque DJAB Excellence</title>
+    <!-- Les styles CSS sont directement inclus pour la simplicité -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+        .container {
+            max-width: 960px;
+        }
+        .card-apropos {
+            background-color: #ffffff;
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header-section {
+            background-color: #e9ecef;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+        }
+        header {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #343a40;
+            color: #f8f9fa;
+            padding: 1rem 0;
+            text-align: center;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="nav_footer.css">
+    <link rel="stylesheet" href="acc_style.css">
+</head>
+<body>
+    <?php
+    require_once(__DIR__ . '/includes/header.php');
+    ?>
+
+    <main class="container my-5">
+        <div class="header-section mb-5">
+            <h1 class="display-5 fw-bold text-primary">À propos de notre bibliothèque</h1>
+            <p class="lead mt-3 mb-0">Découvrez l'histoire de notre projet et notre engagement à promouvoir la lecture.</p>
+        </div>
+        
+        <div class="card-apropos mb-5">
+            <h2 class="h4 fw-bold text-success mb-3">Notre histoire</h2>
+            <p>Notre plateforme de bibliothèque en ligne est le fruit d'un projet de fin de stage, mené avec passion et dévouement. L'objectif était de créer un outil numérique moderne pour faciliter l'accès à la culture et à l'éducation, en s'inspirant des défis et des opportunités offertes par les technologies web.</p>
+        </div>
+
+        <div class="card-apropos mb-5">
+            <h2 class="h4 fw-bold text-success mb-3">Notre mission</h2>
+            <p>Nous pensons que la lecture est un pilier du développement personnel. Notre mission est de démocratiser l'accès au savoir en offrant un catalogue de livres riche et diversifié, accessible à tous. Nous souhaitons créer une communauté de lecteurs où chacun peut découvrir de nouvelles œuvres, partager ses passions et emprunter des livres en toute simplicité.</p>
+        </div>
+        
+        <div class="card-apropos">
+            <h2 class="h4 fw-bold text-success mb-3">L'équipe</h2>
+            <p>
+                Ce projet a été conçu et développé par l'équipe de stagiaires de <strong>COSIT BENIN</strong>.
+                Nous sommes fiers d'avoir mis en œuvre les compétences acquises durant notre formation pour donner vie à cette plateforme.
+            </p>
+        </div>
+    </main>
+
+    <?php
+    require_once(__DIR__ . '/includes/footer.php');
+    ?>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

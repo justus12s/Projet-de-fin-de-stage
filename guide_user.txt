@@ -1,0 +1,58 @@
+Guide d'Utilisation de la Plateforme de Bibliothèque en Ligne
+Ce guide vous aide à naviguer et à utiliser toutes les fonctionnalités de notre plateforme de bibliothèque en ligne, conçue pour vous offrir une expérience de lecture fluide et intuitive.
+
+1. Démarrer
+Pour commencer, vous pouvez explorer le site en tant que visiteur ou vous connecter pour accéder à vos fonctionnalités personnelles.
+
+La Page d'Accueil
+La page d'accueil est la vitrine de la bibliothèque. Elle met en avant les nouveautés et les livres les plus populaires, vous donnant des idées de lecture dès votre arrivée.
+
+La Page de Catalogue
+C'est ici que vous trouverez l'ensemble de notre collection de livres. Vous pouvez :
+
+Rechercher un livre par titre ou par auteur.
+
+Filtrer les résultats par catégorie (roman, science-fiction, etc.) pour affiner votre recherche.
+
+2. Emprunter un Livre
+Pour emprunter un livre, vous devez être connecté.
+
+Sur la Page de Détail du Livre
+En cliquant sur la couverture d'un livre, vous accédez à sa page de détails. Vous y trouverez :
+
+Un résumé de l'ouvrage.
+
+Des informations sur l'auteur.
+
+Son statut de disponibilité.
+
+Si le livre est disponible, un bouton vous permettra de l'emprunter. S'il est déjà emprunté, vous aurez la possibilité de le réserver.
+
+3. Gérer votre Compte
+Une fois connecté, la page "Mon Compte" devient votre espace personnel. Vous pouvez y :
+
+Consulter la liste de vos emprunts actuels avec les dates de retour.
+
+Gérer vos réservations et être notifié de la disponibilité des livres.
+
+Accéder à votre historique d'emprunts (cette fonctionnalité est en cours de développement).
+
+Gérer les informations de votre profil.
+
+4. Panneau d'Administration
+Cette section est réservée aux administrateurs de la bibliothèque. Elle permet de :
+
+Gérer l'ajout, la modification et la suppression de livres dans la base de données.
+
+Suivre les emprunts et les retours en temps réel.
+
+Gérer les utilisateurs de la plateforme.
+
+Fonctionnement technique simplifié
+Le site est structuré en deux parties principales qui travaillent ensemble :
+
+Le Frontend (Interface) : C'est tout ce que vous voyez et avec quoi vous interagissez (les pages web, les boutons, les formulaires). Il est construit avec HTML, CSS et JavaScript.
+
+Le Backend (Logique) : C'est la partie "invisible" qui gère la logique du site, comme la gestion des emprunts et des réservations, et les interactions avec la base de données. Il est développé avec PHP et MySQL.
+
+Ces deux parties communiquent pour que toutes vos actions soient prises en compte et que les informations soient mises à jour.

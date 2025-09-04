@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail du livre - Harry Potter</title>
+    <link rel="stylesheet" href="nav_footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: #fff;
+        }
+        main {
+            flex: 1 0 auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+            padding: 2.5rem 1.5rem;
+        }
+        .book-title {
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+        .book-meta {
+            font-size: 1.1rem;
+            color: #6c757d;
+        }
+        .book-img {
+            max-height: 420px;
+            object-fit: cover;
+            box-shadow: 0 4px 24px rgba(106,17,203,0.08);
+        }
+        footer {
+            flex-shrink: 0;
+            background-color: #1f2137;
+            color: #d1d5db;
+            margin-top: 3rem;
+            text-align: center;
+            padding: 32px 0 16px 0;
+            border-top: 3px solid #6a11cb;
+            letter-spacing: 0.5px;
+            font-size: 1.05rem;
+            box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+        }
+        footer strong {
+            color: #fff;
+        }
+        /* Barre de navigation personnalisée */
+        .navbar-nav .nav-link {
+            transition: background 0.3s, color 0.3s;
+            border-radius: 0.25rem;
+            color: #212529 !important;
+            background: transparent;
+        }
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link:focus {
+            background-color: #6a11cb;
+            color: #fff !important;
+        }
+        @media (max-width: 768px) {
+            main {
+                padding: 1.2rem 0.5rem;
+            }
+            .book-img {
+                max-height: 260px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <?php
+    require_once(__DIR__ . '/includes/header.php');
+    ?>
+    <main class="container my-5">
+        <div class="row justify-content-center align-items-center g-5">
+            <div class="col-md-5 text-center">
+                <img src="images/Harry-Potter-a-l-ecole-des-sorciers.jpg" alt="Harry Potter" class="img-fluid rounded book-img mb-4 mb-md-0">
+            </div>
+            <div class="col-md-7">
+                <h1 class="book-title mb-3">Harry Potter à l'école des sorciers</h1>
+                <div class="book-meta mb-3">J.K. Rowling</div>
+                <p>
+                    Plongez dans l'univers magique de Poudlard avec Harry Potter, un jeune sorcier qui découvre ses pouvoirs et affronte de nombreux défis avec ses amis Ron et Hermione. Ce premier tome de la saga culte vous fera voyager dans un monde rempli de mystères, d'aventures et de magie.
+                </p>
+                <ul class="mb-4">
+                    <li><strong>Genre :</strong> Fantastique, Jeunesse</li>
+                    <li><strong>Année de parution :</strong> 1997</li>
+                    <li><strong>Nombre de pages :</strong> 320</li>
+                </ul>
+                <a href="#" class="btn btn-primary mt-2">Lire un extrait</a>
+                <a href="index.html" class="btn btn-outline-secondary mt-2 ms-2">Retour à l'accueil</a>
+            </div>
+        </div>
+    </main>
+    <?php
+    require_once(__DIR__ . '/includes/footer.php');
+    ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
