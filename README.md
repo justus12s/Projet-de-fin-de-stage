@@ -5,7 +5,8 @@ Gestion d'une bibliothèque en ligne
 
 ------------------------------------------------------------------------------------------------------------------
 **03/09/2025**
-- Mise en place du Dépôt Github 
+- Mise en place du Dépôt Github
+
 **04/09/2025**
 - Struturation simplifié du code avec de php (header et footer dans include)
 - Transformation de tous les fichiers .html en fichiers .php
