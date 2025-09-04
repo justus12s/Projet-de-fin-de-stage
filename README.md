@@ -35,7 +35,7 @@ Conclusion : C'est donnée le top au déroulement du projet...
 - Creation d'un nouveau fichier guie_user.txt qui contient le contenue de la nouvelle page guide_utilisateur.html.
 
 **04/09/2025**
-- Mise à jour du contenue de la page *A propos* .
+- Mise à jour du contenue de la page *a_propos.html* .
 - Mise à jour de la page *connexion.html*.
 - Mise à jour de la page *inscription.html*.
 
