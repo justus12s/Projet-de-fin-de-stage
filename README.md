@@ -11,6 +11,9 @@ Gestion d'une bibliothèque en ligne
 - Struturation simplifié du code avec de php (header et footer dans include)
 - Transformation de tous les fichiers .html en fichiers .php
 
+**05/09/2025**
+- Ajout des tables de la base de données
+
 **Contributeur de ces modifications : Justus BONOU**
 
 ------------------------------------------------------------------------------------------------------------------
