@@ -34,6 +34,10 @@ Gestion d'une bibliothèque en ligne
 - J'ai aussi créé le dossier **images** qui contient les images des livres(books).
 Conclusion : C'est donnée le top au déroulement du projet...
 
+**05/09/2025**
+- Mise en place de la charge graphique .
+- Creation de nouvelle page pour les livres de la page d'accueil.
+- Modification / Suppression d'un élément de la navbar.
 **Contributeur de ces modifications : Josué AGBODO**
 
 -----------------------------------------------------------------------------------------------------------------
@@ -50,6 +54,11 @@ Conclusion : C'est donnée le top au déroulement du projet...
 - Mise à jour du contenue de la page *a_propos.html* .
 - Mise à jour de la page *connexion.html*.
 - Mise à jour de la page *inscription.html*.
+
+**05/09/2025**
+- Mise en place de la charte graphique du site .
+- Recherche du dashboard du panneau d'administration. 
+- Recherche sur comment utilisé Xampp et CodeIgniter.
 
 **Contributeur de ces modifications : Abel KPOKOUTA**
 

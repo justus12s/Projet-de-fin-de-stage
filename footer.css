@@ -1,0 +1,20 @@
+/* Footer optimisé */
+footer {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #d1d5db;
+    margin-top: auto;
+    text-align: center;
+    padding: 2.5rem 0 1.5rem 0;
+    border-top: 4px solid transparent;
+    border-image: linear-gradient(45deg, #6a11cb, #2575fc) 1;
+    letter-spacing: 0.5px;
+    font-size: 1.05rem;
+    box-shadow: 0 -8px 30px rgba(0,0,0,0.2);
+}
+
+footer strong {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
