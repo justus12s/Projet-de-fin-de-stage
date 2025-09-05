@@ -38,6 +38,7 @@ Conclusion : C'est donnée le top au déroulement du projet...
 - Mise en place de la charge graphique .
 - Creation de nouvelle page pour les livres de la page d'accueil.
 - Modification / Suppression d'un élément de la navbar.
+
 **Contributeur de ces modifications : Josué AGBODO**
 
 -----------------------------------------------------------------------------------------------------------------
