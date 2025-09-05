@@ -1,3 +1,14 @@
+<?php
+try
+{
+    $mysqlClient = new PDO('mysql:host=localhost;dbname=biblio;charset=utf8', 'root', '');
+}
+catch (Exception $e)
+{
+    die('Erreur : ' . $e->getMessage());
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
