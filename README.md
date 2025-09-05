@@ -13,6 +13,11 @@ Gestion d'une bibliothèque en ligne
 
 **05/09/2025**
 - Ajout des tables de la base de données
+- logout.php pour gérer la déconexion d'un utilisateur
+- SESSION dans index.php
+- Condition qui vérifie que quelqu'un est connecté avnt d'afficher le lien de déconnexion dans header.php
+- Fichier functions.php pour insérer les fonctions dedans
+- Fonction redirectToUrl pour la redirection vers une autre page
 
 **Contributeur de ces modifications : Justus BONOU**
 

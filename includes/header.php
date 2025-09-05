@@ -27,6 +27,11 @@
                         <li class="nav-item">
                             <a href="connexion.php" class="nav-link">Connexion</a>
                         </li>
+                        <?php if (isset($_SESSION['LOGGED_USER'])) : ?>
+                            <li>
+                                <a href="deconnexion.php">Deconnexion</a>
+                            </li>
+                        <?php endif?>
                     </ul>
                 </div>
             </div>
