@@ -19,6 +19,12 @@ Gestion d'une bibliothèque en ligne
 - Fichier functions.php pour insérer les fonctions dedans
 - Fonction redirectToUrl pour la redirection vers une autre page
 
+**06/09/2025**
+- Mise à jour des options de connexion et d'inscription backend 
+- Insertion du fichier mysql.php pour les informations de connexion à la base de données
+- Insertion du fichier connexion_bdd.php pour gérer la connexion à la base de données
+- Insertion du fichier submit_connexion.php pour gérer le comportement du site(vérification et accès) après connexion
+- Insertion du fichier submit_inscription.php pour gérer le comportement du site (vérification et connexion) après inscription
 **Contributeur de ces modifications : Justus BONOU**
 
 ------------------------------------------------------------------------------------------------------------------

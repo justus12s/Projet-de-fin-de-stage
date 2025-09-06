@@ -13,10 +13,11 @@ CREATE TABLE Administrateur (
     mot_de_passe VARCHAR(12) NOT NULL
 );
 
-INSERT INTO Administrateur (nom,prenom,email, mot_de_passe) VALUES
-('BONOU','Justus','justus@gmail.com','Nus0052'),
-('KPOKOUTA','Abel','abelkpokouta@gmail.com','Dev_Abel');
-
+INSERT INTO `administrateur` (`nom`, `prenom`,`email`, `mot_de_passe`) 
+VALUES 
+('BONOU', 'Mahuna Justus','justusbonou@gmail.com', '$2y$10$uynBN06CbawQ6zasWUNXw.rAXkC6ScMZZD8Cc/DOOz7WWrd6SzcPi'),
+('KPOKOUTA', 'Abel', 'abelkpokouta@gmail.com', '$2y$10$Iu0aMsec8/VQThz4.SK29uHzz20Ll6YDBazAaMQkqBHvO14PPotiy'),
+('AGBODO', 'Josué', 'josueagbodo@gmail.com', '$2y$10$Ef7YL0K5bXcvyJpuIBXhcuZOXvwIXQFjDHMzUSYmhnJqXjKejafdS');
 -- ============================
 --  Table Utilisateur
 -- ============================
@@ -31,12 +32,13 @@ CREATE TABLE Utilisateur (
     mot_de_passe VARCHAR(255) NOT NULL
 );
 
-INSERT INTO Utilisateur (nom,prenom,sexe,naissance,statut,email, mot_de_passe) VALUES
-('BONOU','Justus','Homme','12-08-2005','Etudiant','justus@example.com','pass123'),
-('KOUASSI','Alice','Femme','23-07-2007','Etudiant','alice@example.com','pass123'),
-('AKOU','David','Homme','14-01-2003','Etudiant','david@example.com','pass123'),
-('TCHAGNA','Mireille','Femme','31-03-2001','Etudiant','mireille@example.com','pass123'),
-('HOUNGBO','Eric','Homme','11-09-2005','Etudiant','eric@example.com','pass123');
+INSERT INTO `utilisateur` (`nom`, `prenom`, `sexe`, `naissance`, `statut`, `email`, `mot_de_passe`) 
+VALUES
+('BONOU', 'Justus', 'Homme', '2005-08-12', 'Étudiant', 'justus@example.com', '$2y$10$pQg.YJ4UGxlxJg/8TEUsn.KfPi6Wft9C060AQtksrS8iSTuzV49C6'),
+('KOUASSI', 'Alice', 'Femme', '2007-07-23', 'Étudiant', 'alice@example.com', '$2y$10$PpWtQYzfo5pNN0Q.VfoS/e2lZRxfk1iN6OVIkr1WeFf0EIKFYlqq6'),
+('AKOU', 'David', 'Homme', '2003-01-14', 'Professeur', 'david@example.com', '$2y$10$mu9hTjLFJPUur8MCdoJXNuqInaGlxK2upAaPqMpErs/kyL/6KLDwK'),
+('TCHAGNA', 'Mireille', 'Femme', '2001-03-31', 'Professionnel', 'mireille@example.com', '$2y$10$qvwW.hYojC0rPUnxHSdRR.4Dtx7Sqv9yr8eczflBxvDO/T1duvAjO'),
+('HOUNGBO', 'Eric', 'Homme', '2005-09-11', 'Étudiant', 'eric@example.com', '$2y$10$nk3xNFBRQPOcdYEUJ85PmOYjdVSpTwpkE5.9uTCuRiX05U0HO35S6');
 
 -- ============================
 --  Table Categorie

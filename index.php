@@ -1,13 +1,9 @@
 <?php
 session_start();
-try
-{
-    $mysqlClient = new PDO('mysql:host=localhost;dbname=biblio;charset=utf8', 'root', '');
-}
-catch (Exception $e)
-{
-    die('Erreur : ' . $e->getMessage());
-}
+require_once(__DIR__ . '/config/mysql.php');
+require_once(__DIR__ . '/connexion_bdd.php');
+require_once(__DIR__ . '/donnees_connexion.php');
+require_once(__DIR__ . '/functions.php');
 ?>
 
 <!DOCTYPE html>

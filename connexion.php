@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -70,19 +71,32 @@
     <main class="container my-5">
         <div class="form-container">
             <h1 class="h3 fw-bold text-center mb-4 text-primary">Connexion</h1>
-            <form action="#" method="post">
-                <div class="mb-3">
-                    <label for="email" class="form-label">Adresse e-mail</label>
-                    <input type="email" class="form-control" id="email" required>
+            <?php if (!isset($_SESSION['LOGGED_USER'])) : ?>
+                <form action="submit_connexion.php" method="POST">
+                    <!-- si message d'erreur on l'affiche -->
+                    <?php if (isset($_SESSION['LOGIN_ERROR_MESSAGE'])) : ?>
+                        <div class="alert alert-danger" role="alert">
+                            <?php echo $_SESSION['LOGIN_ERROR_MESSAGE'];
+                            unset($_SESSION['LOGIN_ERROR_MESSAGE']); ?>
+                        </div>
+                    <?php endif; ?>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" aria-describedby="email-help" placeholder="you@exemple.com">
+                        <div id="email-help" class="form-text">e-mail utilisé lors de la création de compte.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Mot de passe</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+                <!-- Si utilisateur/trice bien connectée on affiche un message de succès -->
+            <?php else : ?>
+                <div class="alert alert-success" role="alert">
+                    Bienvenue <?php echo $_SESSION['LOGGED_USER']['email']; ?> et bienvenue sur le site !
                 </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Mot de passe</label>
-                    <input type="password" class="form-control" id="password" required>
-                </div>
-                <div class="d-grid gap-2 mt-4">
-                    <button type="submit" class="btn btn-primary">Se connecter</button>
-                </div>
-            </form>
+            <?php endif; ?>
             <div class="text-center mt-3">
                 <p class="mb-0">Vous n'avez pas de compte ? <a href="inscription.php" class="text-primary text-decoration-none fw-semibold">Inscrivez-vous ici.</a></p>
             </div>

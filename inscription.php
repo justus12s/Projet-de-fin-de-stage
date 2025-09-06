@@ -1,3 +1,4 @@
+<?php session_start()?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -70,18 +71,26 @@
     <main class="container my-5">
         <div class="form-container">
             <h1 class="h3 fw-bold text-center mb-4 text-primary">Inscription</h1>
-            <form action="#" method="post">
+        <?php if (!isset($_SESSION['SUCCES_MESSAGE'])) : ?>
+            <form action="submit_inscription.php" method="POST">
+                <!-- si message d'erreur on l'affiche -->
+                <?php if (isset($_SESSION['INSCRIPTION_ERROR'])) : ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?php echo $_SESSION['INSCRIPTION_ERROR'];
+                        unset($_SESSION['INSCRIPTION_ERROR']); ?>
+                    </div>
+                <?php endif; ?>
                 <div class="mb-3">
                     <label for="nom" class="form-label">Nom</label>
-                    <input type="text" class="form-control" id="nom" required>
+                    <input type="text" class="form-control" name="nom" required>
                 </div>
                 <div class="mb-3">
                     <label for="prenom" class="form-label">Prénom</label>
-                    <input type="text" class="form-control" id="prenom" required>
+                    <input type="text" class="form-control" name="prenom" required>
                 </div>
                 <div class="mb-3">
                     <label for="sexe" class="form-label">Sexe</label>
-                    <select class="form-select form-control" id="sexe" required>
+                    <select class="form-select form-control" name="sexe" required>
                         <option value="">Sélectionnez votre sexe</option>
                         <option value="Homme">Homme</option>
                         <option value="Femme">Femme</option>
@@ -90,28 +99,29 @@
                 </div>
                 <div class="mb-3">
                     <label for="date-naissance" class="form-label">Date de Naissance</label>
-                    <input type="date" class="form-control" id="date-naissance" required>
+                    <input type="date" class="form-control" name="date-naissance" required>
                 </div>
                 <div class="mb-3">
                     <label for="statut" class="form-label">Statut</label>
-                    <select class="form-select form-control" id="statut" required>
+                    <select class="form-select form-control" name="statut" required>
                         <option value="">Sélectionnez votre statut</option>
                         <option value="Étudiant">Étudiant</option>
+                        <option value="Étudiant">Elève</option>
                         <option value="Professeur">Professeur</option>
                         <option value="Professionnel">Professionnel</option>
                     </select>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Adresse e-mail</label>
-                    <input type="email" class="form-control" id="email" required>
+                    <input type="email" class="form-control" name="email" required>
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Mot de passe</label>
-                    <input type="password" class="form-control" id="password" required>
+                    <input type="password" class="form-control" name="password" required>
                 </div>
                 <div class="mb-3">
                     <label for="confirm-password" class="form-label">Confirmer le mot de passe</label>
-                    <input type="password" class="form-control" id="confirm-password" required>
+                    <input type="password" class="form-control" name="confirm-password" required>
                 </div>
                 <div class="d-grid gap-2 mt-4">
                     <button type="submit" class="btn btn-primary">S'inscrire</button>
@@ -120,6 +130,11 @@
             <div class="text-center mt-3">
                 <p class="mb-0">Déjà un compte ? <a href="connexion.php" class="text-primary text-decoration-none fw-semibold">Connectez-vous ici.</a></p>
             </div>
+        <?php else : ?>
+            <div class="alert alert-success" role="alert">
+                <?php echo $_SESSION['SUCCES_MESSAGE']; ?>
+            </div>
+        <?php endif; ?>
         </div>
     </main>
     
