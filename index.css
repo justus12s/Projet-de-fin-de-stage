@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Cards optimisées */
+.card {
+    border: none;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(106,17,203,0.2);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 0.8rem;
+    padding: 10px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.85rem;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(106,17,203,0.4);
+}
+
+/* Section titres */
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+h1 {
+    background: linear-gradient(45deg, #fff, #f8f9fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border-radius: 2px;
+}
+
+/* Avis clients optimisés */
+.avis {
+    background: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 8px 30px rgba(106,17,203,0.1);
+    padding: 2rem;
+    min-height: 220px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.avis::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+}
+
+.avis:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(106,17,203,0.2);
+}
+
+.avis p {
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.avis h4 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+/* Section inscription */
+.sign {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 50%, #667eea 100%);
+    color: #fff;
+    border-radius: 2rem;
+    box-shadow: 0 10px 40px rgba(106,17,203,0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.sign::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 50%);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.inscrit {
+    background: #fff;
+    color: #6a11cb;
+    font-weight: 700;
+    border-radius: 1.5rem;
+    padding: 15px 40px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 1;
+}
+
+.inscrit:hover {
+    background: linear-gradient(45deg, #2575fc, #667eea);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Animations d'entrée */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.fade-in.delay-1 { animation-delay: 0.2s; }
+.fade-in.delay-2 { animation-delay: 0.4s; }
+.fade-in.delay-3 { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 200px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .avis {
+        padding: 1.5rem;
+        min-height: auto;
+    }
+    
+    footer {
+        font-size: 0.95rem;
+        padding: 1.5rem 0 1rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-img-top {
+        height: 180px;
+    }
+    
+    .inscrit {
+        padding: 12px 30px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Loading animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
