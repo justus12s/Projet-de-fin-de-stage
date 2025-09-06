@@ -2,7 +2,6 @@
 session_start();
 require_once(__DIR__ . '/config/mysql.php');
 require_once(__DIR__ . '/connexion_bdd.php');
-require_once(__DIR__ . '/donnees_connexion.php');
 require_once(__DIR__ . '/functions.php');
 ?>
 
@@ -92,14 +91,15 @@ require_once(__DIR__ . '/functions.php');
                 </div>
             </div>
         </section>
-
-        <section class="sign py-5 px-3 rounded-4 shadow text-center mx-auto" style="max-width: 600px;">
-            <h2 class="mb-3">Rejoignez notre communauté !</h2>
-            <p class="mb-4">
-                Accédez à des milliers de livres, articles et ressources exclusives. L'inscription est rapide et gratuite.
-            </p>
-            <a class="inscrit" href="inscription.php">S'inscrire maintenant</a>
-        </section>
+        <?php if (!isset($_SESSION['LOGGED_USER'])) : ?>
+            <section class="sign py-5 px-3 rounded-4 shadow text-center mx-auto" style="max-width: 600px;">
+                <h2 class="mb-3">Rejoignez notre communauté !</h2>
+                <p class="mb-4">
+                    Accédez à des milliers de livres, articles et ressources exclusives. L'inscription est rapide et gratuite.
+                </p>
+                <a class="inscrit" href="inscription.php">S'inscrire maintenant</a>
+            </section>
+        <?php endif?>
     </main>
 
     <?php

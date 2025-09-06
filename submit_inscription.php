@@ -27,9 +27,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $check->execute([$email,$prenom]);
 
         if ($check->rowCount() > 0) {
-            $_SESSION["INSCRIPTION_ERROR"] = "L'utilisateur existe déjà. Connectez-vous";
-            header("Location: inscription.php");
+            $_SESSION["LOGIN_ERROR_MESSAGE"] = "L'utilisateur existe déjà. Connectez-vous";
+            header("Location: connexion.php");
             exit;
+            redirectToUrl('connexion.php');
         }
 
         $sql = "INSERT INTO utilisateur (nom, prenom, sexe, naissance, statut, email, mot_de_passe) 
