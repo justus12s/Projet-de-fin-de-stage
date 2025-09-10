@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1757350834;_ci_previous_url|s:27:"http://localhost:8080/login";_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:4:{s:5:"email";s:22:"kpokoutaabel@gmail.com";s:8:"password";s:8:"abel1234";s:8:"remember";s:2:"on";s:8:"honeypot";s:0:"";}}__ci_vars|a:2:{s:13:"_ci_old_input";s:3:"old";s:5:"error";s:3:"old";}error|s:31:"Email ou mot de passe incorrect";
