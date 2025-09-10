@@ -1,8 +1,8 @@
-Projet de Fin d'Études : Gestion de Bibliothèque en Ligne
+**Projet de Fin d'Études : Gestion de Bibliothèque en Ligne**
 📚 Une application web complète développée avec CodeIgniter 4 pour la gestion efficace d'une bibliothèque. Cette plateforme permet aux administrateurs et aux utilisateurs de gérer les livres, les membres et les emprunts de manière intuitive et sécurisée.
 
-✨ Fonctionnalités
-👥 Gestion des Utilisateurs
+**✨ Fonctionnalités**
+**👥 Gestion des Utilisateurs**
 
 Inscription et authentification sécurisée avec validation par email
 
@@ -14,7 +14,7 @@ Tableaux de bord personnalisés selon le rôle et le statut
 
 Système de récupération de mot de passe
 
-📖 Gestion des Livres
+**📖 Gestion des Livres**
 
 Catalogue complet des livres avec images de couverture
 
@@ -26,7 +26,7 @@ Informations détaillées : titre, auteur, ISBN, catégorie, description, année
 
 CRUD complet (Create, Read, Update, Delete)
 
-🔄 Gestion des Emprunts
+**🔄 Gestion des Emprunts**
 
 Système d'emprunt avec dates de début, retour prévu et retour effectif
 
@@ -38,7 +38,8 @@ Historique complet des transactions avec notes
 
 Gestion des prolongations d'emprunt
 
-🛠️ Technologies Utilisées
+**🛠️ Technologies Utilisées**
+
 Backend : CodeIgniter 4 (PHP 7.4+)
 
 Frontend : HTML5, CSS3, JavaScript, Bootstrap
@@ -47,7 +48,8 @@ Base de données : MySQL 5.7+
 
 Sécurité : Validation des données, protection CSRF, hachage des mots de passe (bcrypt)
 
-📦 Structure du Projet
+**📦 Structure du Projet**
+
 Gestion-Bibliotheque/
 ├── app/
 │   ├── Config/
@@ -78,8 +80,10 @@ Gestion-Bibliotheque/
 ├── system/
 └── writable/
 
-🗃️ Structure Détaillée de la Base de Données
-Table users
+**🗃️ Structure Détaillée de la Base de Données**
+
+**Table users**
+
 CREATE TABLE users (
     id INT PRIMARY KEY AUTO_INCREMENT,
     email VARCHAR(255) UNIQUE NOT NULL,
@@ -118,7 +122,7 @@ CREATE TABLE users (
 );
 
 
-Table books
+**Table books**
 
 CREATE TABLE books (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -135,7 +139,7 @@ CREATE TABLE books (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-Table loans
+**Table loans**
 
 CREATE TABLE loans (
     id INT PRIMARY KEY AUTO_INCREMENT,
