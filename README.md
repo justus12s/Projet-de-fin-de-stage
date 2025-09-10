@@ -1,55 +1,43 @@
-**Projet de Fin d'Études : Gestion de Bibliothèque en Ligne**
+# Projet de Fin d'Études : Gestion de Bibliothèque en Ligne
+
 📚 Une application web complète développée avec CodeIgniter 4 pour la gestion efficace d'une bibliothèque. Cette plateforme permet aux administrateurs et aux utilisateurs de gérer les livres, les membres et les emprunts de manière intuitive et sécurisée.
 
-**✨ Fonctionnalités**
-**👥 Gestion des Utilisateurs**
+## ✨ Fonctionnalités
 
-Inscription et authentification sécurisée avec validation par email
+### 👥 Gestion des Utilisateurs
 
-Rôles distincts : Administrateurs, Étudiants, Enseignants, Professeurs et Bibliothécaires
+- Inscription et authentification sécurisée avec validation par email
+- Rôles distincts : Administrateurs, Étudiants, Enseignants, Professeurs et Bibliothécaires
+- Gestion des statuts d'activation et d'expiration d'abonnement
+- Tableaux de bord personnalisés selon le rôle et le statut
+- Système de récupération de mot de passe
 
-Gestion des statuts d'activation et d'expiration d'abonnement
+### 📖 Gestion des Livres
 
-Tableaux de bord personnalisés selon le rôle et le statut
+- Catalogue complet des livres avec images de couverture
+- Système de recherche et filtrage avancé par titre, auteur, catégorie, ISBN
+- Gestion des stocks (quantité totale et disponible)
+- Informations détaillées : titre, auteur, ISBN, catégorie, description, année de publication
+- CRUD complet (Create, Read, Update, Delete)
 
-Système de récupération de mot de passe
+### 🔄 Gestion des Emprunts
 
-**📖 Gestion des Livres**
+- Système d'emprunt avec dates de début, retour prévu et retour effectif
+- Suivi en temps réel du statut des emprunts (en attente, actif, retourné, en retard, annulé)
+- Notifications automatiques pour les retards de retour
+- Historique complet des transactions avec notes
+- Gestion des prolongations d'emprunt
 
-Catalogue complet des livres avec images de couverture
+## 🛠️ Technologies Utilisées
 
-Système de recherche et filtrage avancé par titre, auteur, catégorie, ISBN
+- **Backend** : CodeIgniter 4 (PHP 7.4+)
+- **Frontend** : HTML5, CSS3, JavaScript, Bootstrap
+- **Base de données** : MySQL 5.7+
+- **Sécurité** : Validation des données, protection CSRF, hachage des mots de passe (bcrypt)
 
-Gestion des stocks (quantité totale et disponible)
+## 📦 Structure du Projet
 
-Informations détaillées : titre, auteur, ISBN, catégorie, description, année de publication
-
-CRUD complet (Create, Read, Update, Delete)
-
-**🔄 Gestion des Emprunts**
-
-Système d'emprunt avec dates de début, retour prévu et retour effectif
-
-Suivi en temps réel du statut des emprunts (en attente, actif, retourné, en retard, annulé)
-
-Notifications automatiques pour les retards de retour
-
-Historique complet des transactions avec notes
-
-Gestion des prolongations d'emprunt
-
-**🛠️ Technologies Utilisées**
-
-Backend : CodeIgniter 4 (PHP 7.4+)
-
-Frontend : HTML5, CSS3, JavaScript, Bootstrap
-
-Base de données : MySQL 5.7+
-
-Sécurité : Validation des données, protection CSRF, hachage des mots de passe (bcrypt)
-
-**📦 Structure du Projet**
-
+```
 Gestion-Bibliotheque/
 ├── app/
 │   ├── Config/
@@ -79,11 +67,13 @@ Gestion-Bibliotheque/
 │       └── uploads/covers/
 ├── system/
 └── writable/
+```
 
-**🗃️ Structure Détaillée de la Base de Données**
+## 🗃️ Structure Détaillée de la Base de Données
 
-**Table users**
+### Table users
 
+```sql
 CREATE TABLE users (
     id INT PRIMARY KEY AUTO_INCREMENT,
     email VARCHAR(255) UNIQUE NOT NULL,
@@ -120,10 +110,11 @@ CREATE TABLE users (
     INDEX idx_membership_expiry (membership_expiry),
     INDEX idx_active (is_active)
 );
+```
 
+### Table books
 
-**Table books**
-
+```sql
 CREATE TABLE books (
     id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(255) NOT NULL,
@@ -138,9 +129,11 @@ CREATE TABLE books (
     cover_image VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+```
 
-**Table loans**
+### Table loans
 
+```sql
 CREATE TABLE loans (
     id INT PRIMARY KEY AUTO_INCREMENT,
     book_id INT NOT NULL,
@@ -156,11 +149,8 @@ CREATE TABLE loans (
     FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
+```
 
-
+---
 
 **Contributeur de ces modifications : Abel KPOKOUTA**
-
----------------------------------------------------------------------------------------------------------------
-
-
