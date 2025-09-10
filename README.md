@@ -25,6 +25,7 @@ Gestion d'une bibliothèque en ligne
 - Insertion du fichier connexion_bdd.php pour gérer la connexion à la base de données
 - Insertion du fichier submit_connexion.php pour gérer le comportement du site(vérification et accès) après connexion
 - Insertion du fichier submit_inscription.php pour gérer le comportement du site (vérification et connexion) après inscription
+
 **Contributeur de ces modifications : Justus BONOU**
 
 ------------------------------------------------------------------------------------------------------------------
