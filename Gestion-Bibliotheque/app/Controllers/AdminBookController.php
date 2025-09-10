@@ -10,7 +10,7 @@ class AdminBookController extends BaseController
     protected $bookModel;
     protected $userModel;
     protected $loanModel;
-    
+
     public function __construct()
     {
         $this->bookModel = new BookModel();
@@ -18,7 +18,6 @@ class AdminBookController extends BaseController
         $this->loanModel = new LoanModel(); // Décommentez si vous avez un modèle Loan;
         helper(['form', 'url']);
     }
-
 
     public function index()
     {
