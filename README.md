@@ -68,6 +68,17 @@ Conclusion : C'est donnée le top au déroulement du projet...
 - Recherche du dashboard du panneau d'administration. 
 - Recherche sur comment utilisé Xampp et CodeIgniter.
 
+**10/09/2025**
+- Creation d'une nouvelle branche nommé *FullStackBranche*.
+- Creation d'un dossier *Gestion-Bibliotheque* .
+- Insection des configuration de configuration de CodeIgniter 
+- Résultats d'un *ls* dans le dossier *Gestion-Bibliotheque* : 
+        app/           env      phpunit.xml.dist  public/    spark*   tests/
+        composer.json  LICENSE  preload.php       README.md  system/  writable/
+- Dans app/Views/ , se trouve tout les fichiers *.html*.
+- Dans app/Models/ , se trouve tout les *Models*  créer.
+- Dans app/Config , se trouve des fichiers comme *Routes.php* et *Database.php* qui permettent de faire des configuration sur les routes et les notre bases de données. 
+
 **Contributeur de ces modifications : Abel KPOKOUTA**
 
 ---------------------------------------------------------------------------------------------------------------
