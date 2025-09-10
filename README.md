@@ -1,84 +1,162 @@
-# Projet-de-fin-de-stage
-Gestion d'une bibliothèque en ligne
+Projet de Fin d'Études : Gestion de Bibliothèque en Ligne
+📚 Une application web complète développée avec CodeIgniter 4 pour la gestion efficace d'une bibliothèque. Cette plateforme permet aux administrateurs et aux utilisateurs de gérer les livres, les membres et les emprunts de manière intuitive et sécurisée.
 
-## Modifications récentes
+✨ Fonctionnalités
+👥 Gestion des Utilisateurs
 
-------------------------------------------------------------------------------------------------------------------
-**03/09/2025**
-- Mise en place du Dépôt Github
+Inscription et authentification sécurisée avec validation par email
 
-**04/09/2025**
-- Struturation simplifié du code avec de php (header et footer dans include)
-- Transformation de tous les fichiers .html en fichiers .php
+Rôles distincts : Administrateurs, Étudiants, Enseignants, Professeurs et Bibliothécaires
 
-**05/09/2025**
-- Ajout des tables de la base de données
-- logout.php pour gérer la déconexion d'un utilisateur
-- SESSION dans index.php
-- Condition qui vérifie que quelqu'un est connecté avnt d'afficher le lien de déconnexion dans header.php
-- Fichier functions.php pour insérer les fonctions dedans
-- Fonction redirectToUrl pour la redirection vers une autre page
+Gestion des statuts d'activation et d'expiration d'abonnement
 
-**06/09/2025**
-- Mise à jour des options de connexion et d'inscription backend 
-- Insertion du fichier mysql.php pour les informations de connexion à la base de données
-- Insertion du fichier connexion_bdd.php pour gérer la connexion à la base de données
-- Insertion du fichier submit_connexion.php pour gérer le comportement du site(vérification et accès) après connexion
-- Insertion du fichier submit_inscription.php pour gérer le comportement du site (vérification et connexion) après inscription
+Tableaux de bord personnalisés selon le rôle et le statut
 
-**Contributeur de ces modifications : Justus BONOU**
+Système de récupération de mot de passe
 
-------------------------------------------------------------------------------------------------------------------
-**03/09/2025**
-- J'ai créé les fichiers suivant :
-    * index.html ,
-    * connexion.html ,
-    * inscription.html ,
-    * a_propos.html ,
-    * catalogue.html , 
-    * acc_style.css ,
+📖 Gestion des Livres
 
-- J'ai aussi créé le dossier **images** qui contient les images des livres(books).
-Conclusion : C'est donnée le top au déroulement du projet...
+Catalogue complet des livres avec images de couverture
 
-**05/09/2025**
-- Mise en place de la charge graphique .
-- Creation de nouvelle page pour les livres de la page d'accueil.
-- Modification / Suppression d'un élément de la navbar.
+Système de recherche et filtrage avancé par titre, auteur, catégorie, ISBN
 
-**Contributeur de ces modifications : Josué AGBODO**
+Gestion des stocks (quantité totale et disponible)
 
------------------------------------------------------------------------------------------------------------------
-**03/09/2025**
-- J'ai réarrangé la page d'accueil, la barre de navigation et le footer, le tout avec **Bootstrap** et quelque lignes de script css pour un rendu moderne et responsive
-- J'ai créé un nouveau fichier 'nav_footer.css' pour le CSS de la navbar et du footer, afin de mieux organiser le style commun à toutes les pages.
-- J'ai aussi créé le fichier 'livre_description.html' pour afficher la description des livres (nom d'auteur, nombre de pages, résumé du livre).
-- J'ai aussi ajouté une nouvelle image du livre d'Harry Potter.
-- Ajout de L'option : **Guide Utilisateur** dans la barre de navigation (file index.html) .
-- Creation du fichier guide_utiliateur.html.
-- Creation d'un nouveau fichier guie_user.txt qui contient le contenue de la nouvelle page guide_utilisateur.html.
+Informations détaillées : titre, auteur, ISBN, catégorie, description, année de publication
 
-**04/09/2025**
-- Mise à jour du contenue de la page *a_propos.html* .
-- Mise à jour de la page *connexion.html*.
-- Mise à jour de la page *inscription.html*.
+CRUD complet (Create, Read, Update, Delete)
 
-**05/09/2025**
-- Mise en place de la charte graphique du site .
-- Recherche du dashboard du panneau d'administration. 
-- Recherche sur comment utilisé Xampp et CodeIgniter.
+🔄 Gestion des Emprunts
 
-**10/09/2025**
-- Creation d'une nouvelle branche nommé *FullStackBranche*.
-- Creation d'un dossier *Gestion-Bibliotheque* .
-- Insection des configuration de configuration de CodeIgniter 
-- Résultats d'un *ls* dans le dossier *Gestion-Bibliotheque* : 
-        app/           env      phpunit.xml.dist  public/    spark*   tests/
-        composer.json  LICENSE  preload.php       README.md  system/  writable/
-- Dans app/Views/ , se trouve tout les fichiers *.html*.
-- Dans app/Models/ , se trouve tout les *Models*  créer.
-- Dans app/Config , se trouve des fichiers comme *Routes.php* et *Database.php* qui permettent de faire des configuration sur les routes et les notre bases de données. 
+Système d'emprunt avec dates de début, retour prévu et retour effectif
+
+Suivi en temps réel du statut des emprunts (en attente, actif, retourné, en retard, annulé)
+
+Notifications automatiques pour les retards de retour
+
+Historique complet des transactions avec notes
+
+Gestion des prolongations d'emprunt
+
+🛠️ Technologies Utilisées
+Backend : CodeIgniter 4 (PHP 7.4+)
+
+Frontend : HTML5, CSS3, JavaScript, Bootstrap
+
+Base de données : MySQL 5.7+
+
+Sécurité : Validation des données, protection CSRF, hachage des mots de passe (bcrypt)
+
+📦 Structure du Projet
+Gestion-Bibliotheque/
+├── app/
+│   ├── Config/
+│   │   ├── Database.php
+│   │   └── Routes.php
+│   ├── Controllers/
+│   │   ├── Auth.php
+│   │   ├── Books.php
+│   │   ├── Loans.php
+│   │   └── Users.php
+│   ├── Models/
+│   │   ├── UserModel.php
+│   │   ├── BookModel.php
+│   │   └── LoanModel.php
+│   ├── Views/
+│   │   ├── auth/
+│   │   ├── books/
+│   │   ├── loans/
+│   │   ├── users/
+│   │   └── dashboard/
+│   └── Libraries/
+├── public/
+│   └── assets/
+│       ├── css/
+│       ├── js/
+│       ├── images/
+│       └── uploads/covers/
+├── system/
+└── writable/
+
+🗃️ Structure Détaillée de la Base de Données
+Table users
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    phone VARCHAR(20),
+    address TEXT,
+    date_of_birth DATE,
+    
+    -- NOUVEAU : Type de statut avec plus d'options
+    status ENUM('student', 'teacher', 'professor', 'librarian', 'professional', 'other') DEFAULT 'student',
+    
+    -- NOUVEAU : Informations spécifiques selon le statut
+    student_id VARCHAR(50),              -- Numéro d'étudiant
+    institution VARCHAR(255),            -- Université/École/Entreprise
+    specialization VARCHAR(255),         -- Domaine d'études/spécialisation
+    professional_title VARCHAR(100),     -- Titre professionnel
+    
+    role ENUM('admin', 'user') DEFAULT 'user',
+    is_active TINYINT(1) DEFAULT 0,
+    membership_expiry DATE,              -- NOUVEAU : Date d'expiration d'adhésion
+    activation_code VARCHAR(32),
+    reset_token VARCHAR(32),
+    reset_expires DATETIME,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    
+    -- Index pour les nouveaux champs
+    INDEX idx_email (email),
+    INDEX idx_role (role),
+    INDEX idx_status (status),
+    INDEX idx_institution (institution),
+    INDEX idx_membership_expiry (membership_expiry),
+    INDEX idx_active (is_active)
+);
+
+
+Table books
+
+CREATE TABLE books (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    isbn VARCHAR(20) UNIQUE,
+    category VARCHAR(100),
+    description TEXT,
+    publish_year YEAR,
+    publisher VARCHAR(255),
+    quantity INT DEFAULT 1,
+    available INT DEFAULT 1,
+    cover_image VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+Table loans
+
+CREATE TABLE loans (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    book_id INT NOT NULL,
+    user_id INT NOT NULL,
+    loan_date DATE NOT NULL,
+    due_date DATE NOT NULL,
+    return_date DATE NULL,
+    status ENUM('pending', 'active', 'returned', 'overdue', 'cancelled') DEFAULT 'pending',
+    notes TEXT,
+    created_by INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+
 
 **Contributeur de ces modifications : Abel KPOKOUTA**
 
 ---------------------------------------------------------------------------------------------------------------
+
+
