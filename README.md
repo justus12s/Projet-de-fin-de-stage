@@ -1,4 +1,4 @@
-# Projet de Fin d'Études : Gestion de Bibliothèque en Ligne
+# Projet de Fin de Stage : Gestion de Bibliothèque en Ligne
 
 📚 Une application web complète développée avec CodeIgniter 4 pour la gestion efficace d'une bibliothèque. Cette plateforme permet aux administrateurs et aux utilisateurs de gérer les livres, les membres et les emprunts de manière intuitive et sécurisée.
 
