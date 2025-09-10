@@ -64,7 +64,7 @@ Gestion-Bibliotheque/
 │       ├── css/
 │       ├── js/
 │       ├── images/
-│       └── uploads/covers/
+│       └── uploads/books/
 ├── system/
 └── writable/
 ```
