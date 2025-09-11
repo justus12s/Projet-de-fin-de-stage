@@ -170,7 +170,26 @@ CREATE TABLE loans (
 
 *Mise au point de tout les options du dashbord des utilisateur*
 
-- Profil , emprunts , reservations , etc...;
+- ✅ Statistiques réelles de ses emprunts
+
+- ✅ Liste de ses emprunts en cours avec images
+
+- ✅ Livres disponibles avec images
+
+- ✅ Interface complète et professionnelle
+
+
+- ✅ Tableau de bord avec statistiques
+
+- ✅ Catalogue des livres disponibles avec recherche
+
+- ✅ Historique des emprunts
+
+- ✅ Détails des emprunts avec progression
+
+- ✅ Interface responsive et professionnelle
+
+- ✅ Système de filtrage et recherche
 
 
 **Contributeur de ces modifications : Abel KPOKOUTA**
