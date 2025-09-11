@@ -2,6 +2,8 @@
 
 📚 Une application web complète développée avec CodeIgniter 4 pour la gestion efficace d'une bibliothèque. Cette plateforme permet aux administrateurs et aux utilisateurs de gérer les livres, les membres et les emprunts de manière intuitive et sécurisée.
 
+**07/09/2025 au 10/09/2025**
+
 ## ✨ Fonctionnalités
 
 ### 👥 Gestion des Utilisateurs
@@ -152,5 +154,23 @@ CREATE TABLE loans (
 ```
 
 ---
+
+
+**10/09/2025 au 11/09/2025**
+
+*Mise au point de tout les options du dashbord des administrateur*
+
+- Gestion des livres en temps réels. ;
+- Gestion des Membres en temps réels. (Utilisateur comme administrateurs) ( CRED ) en temps réels;
+- Gestion des Emprunts en temps réels;
+- Gestion des Retards en temps réels;
+- Option "Parametre" mise en place ;
+- Option "Deconnexion admin";
+
+
+*Mise au point de tout les options du dashbord des utilisateur*
+
+- Profil , emprunts , reservations , etc...;
+
 
 **Contributeur de ces modifications : Abel KPOKOUTA**
