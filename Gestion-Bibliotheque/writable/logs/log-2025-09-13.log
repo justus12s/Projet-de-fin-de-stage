@@ -1,0 +1,101 @@
+CRITICAL - 2025-09-13 00:11:36 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout.php"
+[Method: GET, Route: books/borrow/4]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/borrow', [], true)
+ 4 APPPATH\Controllers\UserController.php(406): view('user/borrow', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->borrow('4')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-13 00:11:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout.php"
+[Method: GET, Route: books/borrow/8]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/borrow', [], true)
+ 4 APPPATH\Controllers\UserController.php(406): view('user/borrow', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->borrow('8')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-13 00:59:58 --> ErrorException: Undefined variable $books
+[Method: GET, Route: my-books]
+in APPPATH\Views\user\my_books.php on line 39.
+ 1 APPPATH\Views\user\my_books.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $books', 'C:\\xampp\\htdocs\\Gestion-Bibliotheque\\app\\Views\\user\\my_books.php', 39)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\app\\Views\\user\\my_books.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 5 APPPATH\Controllers\UserController.php(443): view('user/my_books', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-13 00:59:58 --> ErrorException: Undefined variable $books
+[Method: GET, Route: my-books]
+in APPPATH\Views\user\my_books.php on line 39.
+ 1 APPPATH\Views\user\my_books.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $books', 'C:\\xampp\\htdocs\\Gestion-Bibliotheque\\app\\Views\\user\\my_books.php', 39)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\app\\Views\\user\\my_books.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 5 APPPATH\Controllers\UserController.php(443): view('user/my_books', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-13 08:39:40 --> ErrorException: Undefined array key "status"
+[Method: GET, Route: books]
+in APPPATH\Views\user\books.php on line 88.
+ 1 APPPATH\Views\user\books.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'C:\\xampp\\htdocs\\Gestion-Bibliotheque\\app\\Views\\user\\books.php', 88)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\app\\Views\\user\\books.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/books', [], true)
+ 5 APPPATH\Controllers\UserController.php(246): view('user/books', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->books()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-13 08:39:41 --> ErrorException: Undefined array key "status"
+[Method: GET, Route: books]
+in APPPATH\Views\user\books.php on line 88.
+ 1 APPPATH\Views\user\books.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'C:\\xampp\\htdocs\\Gestion-Bibliotheque\\app\\Views\\user\\books.php', 88)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\app\\Views\\user\\books.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/books', [], true)
+ 5 APPPATH\Controllers\UserController.php(246): view('user/books', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->books()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-13 19:03:36 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/forgot_password.php"
+[Method: GET, Route: forgot-password]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/forgot_password.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/forgot_password', [], true)
+ 3 APPPATH\Controllers\AuthController.php(156): view('auth/forgot_password')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->forgotPassword()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
