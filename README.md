@@ -191,5 +191,8 @@ CREATE TABLE loans (
 
 - ✅ Système de filtrage et recherche
 
+**12/09/2025 au 14/09/2025**
+
+- Mise en forme Responsive de l'interface Uitlisateur ...
 
 **Contributeur de ces modifications : Abel KPOKOUTA**
