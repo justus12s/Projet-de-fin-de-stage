@@ -162,9 +162,7 @@
                                                     </button>
                                                 </form>
                                             <?php endif; ?>
-                                            <a href="<?= site_url('books/detail/' . $loan['book_id']) ?>" class="btn btn-outline-primary w-100">
-                                                <i class="fas fa-book me-2"></i> Voir le livre
-                                            </a>
+                                           
                                         </div>
                                     </div>
                                 </div>
