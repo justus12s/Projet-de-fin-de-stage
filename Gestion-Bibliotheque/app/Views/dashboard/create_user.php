@@ -66,14 +66,15 @@
                             <div class="input-group">
                                 <input type="password" class="form-control" id="password" name="password" required>
                                 <div class="input-group-append">
-                                    <button type="button" class="btn btn-outline-secondary generate-password-btn" data-target="password">
+                                    <button type="button" class="btn btn-outline-secondary" id="generatePassword">
                                         <i class="fas fa-sync-alt"></i> Générer
                                     </button>
-                                    <button type="button" class="btn btn-outline-secondary toggle-password-btn" data-toggle="password">
+                                    <button type="button" class="btn btn-outline-secondary" id="togglePassword">
                                         <i class="fas fa-eye"></i>
                                     </button>
                                 </div>
                             </div>
+                            <small class="form-text text-muted" id="passwordStrength"></small>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -88,6 +89,7 @@
                     </div>
                 </div>
 
+                <!-- Le reste de votre formulaire reste inchangé -->
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
@@ -151,27 +153,98 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    const passwordField = document.getElementById('password');
+    const generateBtn = document.getElementById('generatePassword');
+    const toggleBtn = document.getElementById('togglePassword');
+    const strengthText = document.getElementById('passwordStrength');
+
+    // Fonction pour générer un mot de passe fort
+    function generateStrongPassword(length = 12) {
+        const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?";
+        let password = "";
+        
+        // Assurer au moins un de chaque type
+        password += "ABCDEFGHIJKLMNOPQRSTUVWXYZ".charAt(Math.floor(Math.random() * 26));
+        password += "abcdefghijklmnopqrstuvwxyz".charAt(Math.floor(Math.random() * 26));
+        password += "0123456789".charAt(Math.floor(Math.random() * 10));
+        password += "!@#$%^&*()_+-=[]{}|;:,.<>?".charAt(Math.floor(Math.random() * 26));
+        
+        // Remplir le reste
+        for (let i = password.length; i < length; i++) {
+            password += charset.charAt(Math.floor(Math.random() * charset.length));
+        }
+        
+        // Mélanger le mot de passe
+        return password.split('').sort(() => Math.random() - 0.5).join('');
+    }
+
     // Génération de mot de passe
-    document.getElementById('generatePassword').addEventListener('click', function() {
-        fetch('<?= base_url('/admin/dashboard/users/generate-password') ?>')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('password').value = data.password;
-                document.getElementById('password').type = 'text';
-            });
+    generateBtn.addEventListener('click', function() {
+        const newPassword = generateStrongPassword();
+        passwordField.value = newPassword;
+        passwordField.type = 'text';
+        
+        // Afficher la force du mot de passe
+        strengthText.textContent = "Mot de passe généré : " + checkPasswordStrength(newPassword);
+        strengthText.className = "form-text text-success";
+        
+        // Revert to password field after 5 seconds
+        setTimeout(() => {
+            passwordField.type = 'password';
+        }, 5000);
     });
 
     // Afficher/Masquer le mot de passe
-    document.getElementById('togglePassword').addEventListener('click', function() {
-        const passwordField = document.getElementById('password');
+    toggleBtn.addEventListener('click', function() {
         if (passwordField.type === 'password') {
             passwordField.type = 'text';
-            this.innerHTML = '<i class="fas fa-eye-slash"></i>';
+            toggleBtn.innerHTML = '<i class="fas fa-eye-slash"></i>';
         } else {
             passwordField.type = 'password';
-            this.innerHTML = '<i class="fas fa-eye"></i>';
+            toggleBtn.innerHTML = '<i class="fas fa-eye"></i>';
         }
     });
+
+    // Vérifier la force du mot de passe en temps réel
+    passwordField.addEventListener('input', function() {
+        if (passwordField.value) {
+            strengthText.textContent = "Force du mot de passe : " + checkPasswordStrength(passwordField.value);
+            strengthText.className = "form-text " + getStrengthColor(passwordField.value);
+        } else {
+            strengthText.textContent = "";
+        }
+    });
+
+    // Fonction pour vérifier la force du mot de passe
+    function checkPasswordStrength(password) {
+        let strength = 0;
+        
+        if (password.length >= 8) strength++;
+        if (password.match(/[a-z]+/)) strength++;
+        if (password.match(/[A-Z]+/)) strength++;
+        if (password.match(/[0-9]+/)) strength++;
+        if (password.match(/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/)) strength++;
+        
+        switch(strength) {
+            case 0: case 1: case 2: return "Faible";
+            case 3: return "Moyen";
+            case 4: return "Fort";
+            case 5: return "Très fort";
+            default: return "Faible";
+        }
+    }
+
+    // Couleur en fonction de la force
+    function getStrengthColor(password) {
+        const strength = checkPasswordStrength(password);
+        switch(strength) {
+            case "Faible": return "text-danger";
+            case "Moyen": return "text-warning";
+            case "Fort": return "text-info";
+            case "Très fort": return "text-success";
+            default: return "text-muted";
+        }
+    }
 });
 </script>
 <?= $this->endSection() ?>
