@@ -189,7 +189,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="<?= site_url('dashboard') ?>">
-                <i class="fas fa-book-reader me-2"></i>Espace Membre
+                <i class="fas fa-book-reader me-2"></i>DJAB Excellence
             </a>
             <button class="navbar-toggler d-lg-none" type="button" id="sidebarToggle">
                 <i class="fas fa-bars"></i>
