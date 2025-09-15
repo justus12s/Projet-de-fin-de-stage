@@ -501,8 +501,6 @@ class UserController extends BaseController
     }  
 
 
-
-
     // Ajoutez cette méthode pour gérer le retour des livres
     public function returnBook($loanId)
     {
