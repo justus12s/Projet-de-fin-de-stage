@@ -9,7 +9,8 @@ class LoanModel extends Model
     protected $primaryKey = 'id';
     protected $allowedFields = [
         'book_id', 'user_id', 'loan_date', 'due_date', 
-        'return_date', 'status', 'notes', 'created_by'
+        'return_date', 'status', 'notes', 'created_by',
+        'reservation_date', 'expiry_date', 'type'
     ];
     protected $useTimestamps = true;
     protected $createdField = 'created_at';
@@ -19,16 +20,13 @@ class LoanModel extends Model
     protected $validationRules = [
         'book_id' => 'required|numeric',
         'user_id' => 'required|numeric',
-        'loan_date' => 'required|valid_date',
-        'due_date' => 'required|valid_date',
-        'status' => 'required|in_list[pending,active,returned,overdue,cancelled]'
+        'loan_date' => 'permit_empty|valid_date',
+        'due_date' => 'permit_empty|valid_date',
+        'reservation_date' => 'permit_empty|valid_date',
+        'expiry_date' => 'permit_empty|valid_date',
+        'status' => 'required|in_list[pending,active,returned,overdue,cancelled,reserved]',
+        'type' => 'required|in_list[loan,reservation]'
     ];
-
-    /**
-     * Récupère les emprunts avec les informations des livres et utilisateurs
-     */
-
-    // Dans app/Models/LoanModel.php
 
     public function getLoansWithDetails($options = [])
     {
@@ -43,14 +41,15 @@ class LoanModel extends Model
                     u.last_name, 
                     u.email,
                     u.phone')
-            ->join('books b', 'b.id = l.book_id')  // Jointure avec la table books
-            ->join('users u', 'u.id = l.user_id'); // Jointure avec la table users
+            ->join('books b', 'b.id = l.book_id')
+            ->join('users u', 'u.id = l.user_id');
 
-        // Appliquer les filtres
+        if (!empty($options['type'])) {
+            $builder->where('l.type', $options['type']);
+        }
         if (!empty($options['status'])) {
             $builder->where('l.status', $options['status']);
         }
-        
         if (!empty($options['search'])) {
             $builder->groupStart()
                 ->like('b.title', $options['search'])
@@ -60,13 +59,9 @@ class LoanModel extends Model
                 ->orLike('b.author', $options['search'])
                 ->groupEnd();
         }
-
-        // Filtre par ID si spécifié
         if (!empty($options['id'])) {
             $builder->where('l.id', $options['id']);
         }
-
-        // Limite pour les emprunts récents
         if (!empty($options['limit'])) {
             $builder->limit($options['limit']);
         }
@@ -75,17 +70,14 @@ class LoanModel extends Model
                     ->get()
                     ->getResultArray();
     }
-    
-   
-        /**
-     * Récupère les emprunts en retard
-     */
+
     public function getOverdueLoans()
     {
         return $this->db->table('loans l')
             ->select('l.*, b.title as book_title, b.cover_image, b.author, u.first_name, u.last_name, u.email')
             ->join('books b', 'b.id = l.book_id')
             ->join('users u', 'u.id = l.user_id')
+            ->where('l.type', 'loan')
             ->where('l.due_date <', date('Y-m-d'))
             ->where('l.status', 'active')
             ->orderBy('l.due_date', 'ASC')
@@ -93,62 +85,59 @@ class LoanModel extends Model
             ->getResultArray();
     }
 
-    
-    /**
-     * Vérifie si un livre est déjà emprunté
-     */
     public function isBookBorrowed($bookId)
     {
         return $this->where('book_id', $bookId)
-                   ->where('status', 'active')
+                   ->where('type', 'loan')
+                   ->whereIn('status', ['active', 'overdue'])
                    ->countAllResults() > 0;
     }
 
-    /**
-     * Met à jour le statut des emprunts en retard
-     */
+    public function isBookReserved($bookId)
+    {
+        return $this->where('book_id', $bookId)
+                   ->where('type', 'reservation')
+                   ->where('status', 'reserved')
+                   ->countAllResults() > 0;
+    }
+
     public function updateOverdueLoans()
     {
-        $this->where('due_date <', date('Y-m-d'))
+        $this->where('type', 'loan')
+             ->where('due_date <', date('Y-m-d'))
              ->where('status', 'active')
              ->set('status', 'overdue')
              ->update();
     }
 
-  
-    /**
-     * Statistiques des emprunts
-     */
     public function getLoanStats()
     {
         return [
-            'total' => $this->countAll(),
-            'active' => $this->where('status', 'active')->countAllResults(),
-            'overdue' => $this->where('status', 'overdue')->countAllResults(),
-            'returned' => $this->where('status', 'returned')->countAllResults(),
-            'pending' => $this->where('status', 'pending')->countAllResults(),
-            'cancelled' => $this->where('status', 'cancelled')->countAllResults()
+            'total_loans' => $this->where('type', 'loan')->countAllResults(),
+            'active_loans' => $this->where('type', 'loan')->where('status', 'active')->countAllResults(),
+            'overdue_loans' => $this->where('type', 'loan')->where('status', 'overdue')->countAllResults(),
+            'returned_loans' => $this->where('type', 'loan')->where('status', 'returned')->countAllResults(),
+            'total_reservations' => $this->where('type', 'reservation')->countAllResults(),
+            'active_reservations' => $this->where('type', 'reservation')->where('status', 'reserved')->countAllResults(),
+            'cancelled_reservations' => $this->where('type', 'reservation')->where('status', 'cancelled')->countAllResults()
         ];
     }
 
-        /**
-     * Compte les emprunts actifs d'un utilisateur
-     */
     public function countUserActiveLoans($userId)
     {
         return $this->where('user_id', $userId)
-                ->whereIn('status', ['active', 'overdue'])
-                ->countAllResults();
+                   ->where('type', 'loan')
+                   ->whereIn('status', ['active', 'overdue'])
+                   ->countAllResults();
     }
 
-
-    // Utilisateur ..
-
-        /**
-     * Récupère les emprunts actifs d'un utilisateur
-     */
-    // Dans app/Models/LoanModel.php
-
+    public function countUserActiveReservations($userId)
+    {
+        return $this->where('user_id', $userId)
+                   ->where('type', 'reservation')
+                   ->where('status', 'reserved')
+                   ->countAllResults();
+    }
 
     public function getUserActiveLoans($userId)
     {
@@ -156,13 +145,26 @@ class LoanModel extends Model
             ->select('l.*, b.title, b.author, b.cover_image, b.isbn, b.category')
             ->join('books b', 'b.id = l.book_id')
             ->where('l.user_id', $userId)
+            ->where('l.type', 'loan')
             ->whereIn('l.status', ['active', 'overdue'])
             ->orderBy('l.due_date', 'ASC')
             ->get()
             ->getResultArray();
     }
 
-    
+    public function getUserReservations($userId)
+    {
+        return $this->db->table('loans l')
+            ->select('l.*, b.title, b.author, b.cover_image, b.isbn, b.category')
+            ->join('books b', 'b.id = l.book_id')
+            ->where('l.user_id', $userId)
+            ->where('l.type', 'reservation')
+            ->where('l.status', 'reserved')
+            ->orderBy('l.reservation_date', 'DESC')
+            ->get()
+            ->getResultArray();
+    }
+
     public function getUserLoanHistory($userId)
     {
         return $this->db->table('loans l')
@@ -184,14 +186,64 @@ class LoanModel extends Model
             ->getRowArray();
     }
 
+    public function createReservation($data)
+    {
+        $reservationData = [
+            'book_id' => $data['book_id'],
+            'user_id' => $data['user_id'],
+            'reservation_date' => date('Y-m-d H:i:s'),
+            'expiry_date' => date('Y-m-d H:i:s', strtotime('+48 hours')),
+            'status' => 'reserved',
+            'type' => 'reservation',
+            'created_by' => $data['user_id']
+        ];
+        
+        return $this->insert($reservationData);
+    }
 
+    public function convertReservationToLoan($reservationId, $adminId)
+    {
+        $reservation = $this->find($reservationId);
+        
+        if (!$reservation || $reservation['type'] !== 'reservation') {
+            return false;
+        }
 
+        $loanData = [
+            'type' => 'loan',
+            'status' => 'active',
+            'loan_date' => date('Y-m-d'),
+            'due_date' => date('Y-m-d', strtotime('+30 days')),
+            'reservation_date' => null,
+            'expiry_date' => null,
+            'created_by' => $adminId
+        ];
 
+        return $this->update($reservationId, $loanData);
+    }
 
+    public function getExpiredReservations()
+    {
+        return $this->where('type', 'reservation')
+                   ->where('status', 'reserved')
+                   ->where('expiry_date <', date('Y-m-d H:i:s'))
+                   ->findAll();
+    }
 
+    public function cancelReservation($reservationId)
+    {
+        return $this->where('id', $reservationId)
+                   ->where('type', 'reservation')
+                   ->set('status', 'cancelled')
+                   ->update();
+    }
 
-
-
-
-
+    public function hasUserReservedBook($userId, $bookId)
+    {
+        return $this->where('user_id', $userId)
+                   ->where('book_id', $bookId)
+                   ->where('type', 'reservation')
+                   ->where('status', 'reserved')
+                   ->countAllResults() > 0;
+    }
 }

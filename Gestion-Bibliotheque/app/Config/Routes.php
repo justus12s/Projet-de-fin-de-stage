@@ -13,8 +13,8 @@ $routes->setAutoRoute(false);
 $routes->get('/', 'Home::index');
 $routes->get('a_propos', 'Home::a_propos');         // ← Slash enlevé
 $routes->get('guide_utilisateur', 'Home::guide_utilisateur');
-$routes->get('contact', 'Home::contact');      // ← Slash enlevé
-// Juste pour creer des utilisateur admin . Après , ces lignes de condes seront supprimées...
+$routes->get('contact', 'Home::contact');          // ← Slash enlevé
+// Juste pour creer des utilisateur admin. Après, ces lignes seront supprimées...
 $routes->get('create-super-admin', 'AdminCreator::createAdmin');
 $routes->get('create-all-admins', 'AdminCreator::createMultipleAdmins');
 
@@ -29,31 +29,28 @@ $routes->post('auth/forgot-password', 'AuthController::attemptForgotPassword');
 $routes->get('reset-password/(:any)', 'AuthController::resetPassword/$1');
 $routes->post('auth/reset-password', 'AuthController::attemptResetPassword');
 
-
-
 // Routes protégées (utilisateurs normaux)
 $routes->group('', ['filter' => 'auth'], function($routes) {
     $routes->get('dashboard', 'UserController::dashboard');
     $routes->get('profile', 'UserController::profile');
     $routes->post('profile/update', 'UserController::updateProfile');
     $routes->get('my-books', 'UserController::myBooks');
-    $routes->get('my-reservations', 'UserController::myReservations');
-    $routes->get('books', 'UserController::books'); // ← Ajouter
-    $routes->get('history', 'UserController::history'); // ← Ajouter
-    $routes->get('loan/view/(:num)', 'UserController::viewLoan/$1'); // ← Ajouter
+    $routes->get('my-reservations', 'ReservationController::myReservations'); // ← Mise à jour
+    $routes->get('books', 'UserController::books'); 
+    $routes->get('history', 'UserController::history'); 
+    $routes->get('loan/view/(:num)', 'UserController::viewLoan/$1'); 
     $routes->get('api/book/(:num)', 'UserController::getBookDetails/$1');
     $routes->post('profile/change-password', 'UserController::changePassword');
     
-    // ... routes existantes ...
-    $routes->get('books/borrow/(:num)', 'UserController::borrow/$1'); // Page de confirmation d'emprunt
-    $routes->post('books/borrow/(:num)', 'UserController::borrowBook/$1'); // Action d'emprunt
-    $routes->post('loan/return/(:num)', 'UserController::returnBook/$1'); // Retour de livre
+    // Emprunts
+    $routes->get('books/borrow/(:num)', 'UserController::borrow/$1'); 
+    $routes->post('books/borrow/(:num)', 'UserController::borrowBook/$1'); 
+    $routes->post('loan/return/(:num)', 'UserController::returnBook/$1'); 
 
+    // Réservations
+    $routes->get('books/confirm/(:num)', 'ReservationController::confirm/$1'); // Page confirmation réservation
+    $routes->post('books/reserve/(:num)', 'ReservationController::reserve/$1'); // Action réservation
 });
-
-
-
-
 
 // Routes administrateur
 $routes->group('admin', ['filter' => 'auth:admin'], function($routes) {
@@ -80,7 +77,7 @@ $routes->group('admin', ['filter' => 'auth:admin'], function($routes) {
         $routes->get('users/toggle-status/(:num)', 'AdminUserController::toggleStatus/$1');
         $routes->get('users/generate-password', 'AdminUserController::generatePassword');
 
-        // Gestion des prêts ( emprunts )...
+        // Gestion des prêts (emprunts)
         $routes->get('loans', 'AdminLoanController::index');
         $routes->get('loans/create', 'AdminLoanController::create');
         $routes->post('loans/store', 'AdminLoanController::store');
@@ -89,11 +86,9 @@ $routes->group('admin', ['filter' => 'auth:admin'], function($routes) {
         $routes->get('loans/view/(:num)', 'AdminLoanController::view/$1');
         $routes->get('overdue', 'AdminLoanController::overdue');
 
-        // Settings ( Parametrages )
-        // Dans app/Config/Routes.php
+        // Settings (Paramétrages)
         $routes->get('settings', 'SettingsController::index');
         $routes->post('settings/save', 'SettingsController::save');
-        // Dans app/Config/Routes.php
         $routes->get('loans/user-loan-count/(:num)', 'AdminLoanController::getUserLoanCount/$1');
 
         // Statistiques
@@ -108,9 +103,3 @@ $routes->get('test-db', 'TestController::checkDB');
 $routes->set404Override(function() {
     return view('errors/html/error_404');
 });
-
-
-
-
-
-  
