@@ -172,6 +172,15 @@
                 padding: 0.25rem 0.5rem;
                 font-size: 0.8rem;
             }
+            #closeSidebar{
+                width: 32px;
+                height: 32px;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>

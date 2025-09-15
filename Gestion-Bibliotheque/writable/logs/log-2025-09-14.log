@@ -1,0 +1,180 @@
+CRITICAL - 2025-09-14 22:44:01 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/dashboard/users]
+in APPPATH\Views\dashboard\section_users.php on line 140.
+ 1 APPPATH\Views\dashboard\section_users.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php', 140)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard/section_users', [], true)
+ 5 APPPATH\Controllers\AdminUserController.php(60): view('dashboard/section_users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminUserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-14 22:44:02 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/dashboard/users]
+in APPPATH\Views\dashboard\section_users.php on line 140.
+ 1 APPPATH\Views\dashboard\section_users.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php', 140)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard/section_users', [], true)
+ 5 APPPATH\Controllers\AdminUserController.php(60): view('dashboard/section_users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminUserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-14 22:44:19 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/dashboard/users]
+in APPPATH\Views\dashboard\section_users.php on line 140.
+ 1 APPPATH\Views\dashboard\section_users.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php', 140)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard/section_users', [], true)
+ 5 APPPATH\Controllers\AdminUserController.php(60): view('dashboard/section_users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminUserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-14 22:44:20 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/dashboard/users]
+in APPPATH\Views\dashboard\section_users.php on line 140.
+ 1 APPPATH\Views\dashboard\section_users.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php', 140)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard/section_users', [], true)
+ 5 APPPATH\Controllers\AdminUserController.php(60): view('dashboard/section_users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminUserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-14 22:44:21 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/dashboard/users]
+in APPPATH\Views\dashboard\section_users.php on line 140.
+ 1 APPPATH\Views\dashboard\section_users.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php', 140)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard/section_users', [], true)
+ 5 APPPATH\Controllers\AdminUserController.php(60): view('dashboard/section_users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminUserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-14 22:44:22 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/dashboard/users]
+in APPPATH\Views\dashboard\section_users.php on line 140.
+ 1 APPPATH\Views\dashboard\section_users.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php', 140)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard/section_users', [], true)
+ 5 APPPATH\Controllers\AdminUserController.php(60): view('dashboard/section_users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminUserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-14 22:44:41 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/dashboard/users]
+in APPPATH\Views\dashboard\section_users.php on line 140.
+ 1 APPPATH\Views\dashboard\section_users.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php', 140)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard/section_users', [], true)
+ 5 APPPATH\Controllers\AdminUserController.php(60): view('dashboard/section_users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminUserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-14 22:44:41 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/dashboard/users]
+in APPPATH\Views\dashboard\section_users.php on line 140.
+ 1 APPPATH\Views\dashboard\section_users.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php', 140)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard/section_users', [], true)
+ 5 APPPATH\Controllers\AdminUserController.php(60): view('dashboard/section_users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminUserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-14 22:45:53 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/dashboard/users]
+in APPPATH\Views\dashboard\section_users.php on line 140.
+ 1 APPPATH\Views\dashboard\section_users.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php', 140)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard/section_users', [], true)
+ 5 APPPATH\Controllers\AdminUserController.php(60): view('dashboard/section_users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminUserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-14 22:45:54 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/dashboard/users]
+in APPPATH\Views\dashboard\section_users.php on line 140.
+ 1 APPPATH\Views\dashboard\section_users.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php', 140)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard/section_users', [], true)
+ 5 APPPATH\Controllers\AdminUserController.php(60): view('dashboard/section_users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminUserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-14 22:45:55 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/dashboard/users]
+in APPPATH\Views\dashboard\section_users.php on line 140.
+ 1 APPPATH\Views\dashboard\section_users.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php', 140)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard/section_users', [], true)
+ 5 APPPATH\Controllers\AdminUserController.php(60): view('dashboard/section_users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminUserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-14 22:45:55 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/dashboard/users]
+in APPPATH\Views\dashboard\section_users.php on line 140.
+ 1 APPPATH\Views\dashboard\section_users.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php', 140)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\app\\Views\\dashboard\\section_users.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard/section_users', [], true)
+ 5 APPPATH\Controllers\AdminUserController.php(60): view('dashboard/section_users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminUserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Hp Elitebook\\Desktop\\STAGE\\Projet-de-fin-de-stage\\Gestion-Bibliotheque\\public\\index.php')

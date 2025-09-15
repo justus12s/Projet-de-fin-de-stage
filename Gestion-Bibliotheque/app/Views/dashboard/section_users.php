@@ -2,9 +2,11 @@
 
 <?= $this->section('content') ?>
 <div class="container-fluid">
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800"><?= $page_title ?></h1>
-        <a href="<?= base_url('/admin/dashboard/users/create') ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+
+    <!-- En-tête -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4 flex-wrap">
+        <h1 class="h3 mb-2 text-gray-800"><?= $page_title ?></h1>
+        <a href="<?= base_url('/admin/dashboard/users/create') ?>" class="btn btn-sm btn-primary shadow-sm mb-2">
             <i class="fas fa-plus fa-sm text-white-50"></i> Nouvel Utilisateur
         </a>
     </div>
@@ -16,8 +18,7 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Total Utilisateurs</div>
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Utilisateurs</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total_users ?></div>
                         </div>
                         <div class="col-auto">
@@ -33,8 +34,7 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                Administrateurs</div>
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Administrateurs</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total_admins ?></div>
                         </div>
                         <div class="col-auto">
@@ -50,8 +50,7 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                Abonnés</div>
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Abonnés</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total_users ?></div>
                         </div>
                         <div class="col-auto">
@@ -67,8 +66,7 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                Utilisateurs Actifs</div>
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Utilisateurs Actifs</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total_active ?></div>
                         </div>
                         <div class="col-auto">
@@ -86,7 +84,7 @@
             <h6 class="m-0 font-weight-bold text-primary">Filtres</h6>
         </div>
         <div class="card-body">
-            <form method="get" class="form-inline">
+            <form method="get" class="form-inline flex-wrap">
                 <div class="form-group mr-2 mb-2">
                     <input type="text" name="search" class="form-control" placeholder="Rechercher..." value="<?= $search ?>">
                 </div>
@@ -119,7 +117,6 @@
             <?php if (session()->getFlashdata('success')): ?>
                 <div class="alert alert-success"><?= session()->getFlashdata('success') ?></div>
             <?php endif; ?>
-            
             <?php if (session()->getFlashdata('error')): ?>
                 <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
             <?php endif; ?>
@@ -152,19 +149,11 @@
                                 </span>
                             </td>
                             <td><?= date('d/m/Y', strtotime($user['created_at'])) ?></td>
-                            <td>
-                                <a href="<?= base_url('/admin/dashboard/users/view/' . $user['id']) ?>" class="btn btn-info btn-sm" title="Voir">
-                                    <i class="fas fa-eye"></i>
-                                </a>
-                                <a href="<?= base_url('/admin/dashboard/users/edit/' . $user['id']) ?>" class="btn btn-warning btn-sm" title="Modifier">
-                                    <i class="fas fa-edit"></i>
-                                </a>
-                                <a href="<?= base_url('/admin/dashboard/users/toggle-status/' . $user['id']) ?>" class="btn btn-<?= $user['is_active'] ? 'warning' : 'success' ?> btn-sm" title="<?= $user['is_active'] ? 'Désactiver' : 'Activer' ?>">
-                                    <i class="fas fa-<?= $user['is_active'] ? 'times' : 'check' ?>"></i>
-                                </a>
-                                <a href="<?= base_url('/admin/dashboard/users/delete/' . $user['id']) ?>" class="btn btn-danger btn-sm" title="Supprimer" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur ?')">
-                                    <i class="fas fa-trash"></i>
-                                </a>
+                            <td class="action-buttons">
+                                <a href="<?= base_url('/admin/dashboard/users/view/' . $user['id']) ?>" class="btn btn-info btn-sm" title="Voir"><i class="fas fa-eye"></i></a>
+                                <a href="<?= base_url('/admin/dashboard/users/edit/' . $user['id']) ?>" class="btn btn-warning btn-sm" title="Modifier"><i class="fas fa-edit"></i></a>
+                                <a href="<?= base_url('/admin/dashboard/users/toggle-status/' . $user['id']) ?>" class="btn btn-<?= $user['is_active'] ? 'warning' : 'success' ?> btn-sm" title="<?= $user['is_active'] ? 'Désactiver' : 'Activer' ?>"><i class="fas fa-<?= $user['is_active'] ? 'times' : 'check' ?>"></i></a>
+                                <a href="<?= base_url('/admin/dashboard/users/delete/' . $user['id']) ?>" class="btn btn-danger btn-sm" title="Supprimer" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur ?')"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                         <?php endforeach; ?>
@@ -173,5 +162,6 @@
             </div>
         </div>
     </div>
+
 </div>
 <?= $this->endSection() ?>

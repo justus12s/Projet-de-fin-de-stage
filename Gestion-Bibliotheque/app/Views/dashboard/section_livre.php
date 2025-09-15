@@ -20,8 +20,10 @@
         body {
             background-color: #f8f9fa;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
         }
         
+        /* Sidebar */
         .sidebar {
             background-color: var(--secondary-color);
             color: white;
@@ -29,6 +31,9 @@
             position: fixed;
             padding-top: 20px;
             width: 250px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            overflow-y: auto;
         }
         
         .sidebar .nav-link {
@@ -36,6 +41,7 @@
             padding: 12px 20px;
             margin: 4px 0;
             border-radius: 4px;
+            white-space: nowrap;
         }
         
         .sidebar .nav-link:hover, .sidebar .nav-link.active {
@@ -49,11 +55,14 @@
             text-align: center;
         }
         
+        /* Main content */
         .main-content {
             margin-left: 250px;
             padding: 20px;
+            transition: all 0.3s ease;
         }
         
+        /* Header */
         .header {
             background-color: white;
             padding: 15px 20px;
@@ -63,6 +72,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
         
         .recent-table {
@@ -94,17 +104,6 @@
             border-radius: 4px;
         }
         
-        @media (max-width: 768px) {
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-            }
-            .main-content {
-                margin-left: 0;
-            }
-        }
-        
         .modal-content {
             border-radius: 10px;
             border: none;
@@ -126,13 +125,184 @@
             background-color: #2980b9;
             border-color: #2980b9;
         }
+        
+        /* Mobile optimizations */
+        @media (max-width: 992px) {
+            .sidebar { 
+                left: -250px; 
+                z-index: 1000; 
+            }
+            
+            .sidebar.active { 
+                left: 0; 
+                box-shadow: 3px 0 15px rgba(0,0,0,0.2);
+            }
+            
+            .main-content { 
+                margin-left: 0; 
+            }
+            
+            .overlay { 
+                display: none; 
+                position: fixed; 
+                top: 0; 
+                left: 0; 
+                height: 100%; 
+                width: 100%; 
+                background: rgba(0,0,0,0.5); 
+                z-index: 999; 
+            }
+            
+            .overlay.active { 
+                display: block; 
+            }
+            
+            .header {
+                padding: 12px 15px;
+            }
+            
+            .header h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .recent-table {
+                padding: 15px;
+                overflow-x: auto;
+            }
+            
+            .table {
+                font-size: 0.9rem;
+            }
+            
+            .user-profile span {
+                display: none;
+            }
+            
+            .d-flex.justify-content-between.align-items-center.mb-4 {
+                flex-direction: column;
+                align-items: flex-start !important;
+            }
+            
+            .d-flex.justify-content-between.align-items-center.mb-4 h3 {
+                margin-bottom: 15px;
+            }
+            
+            .action-buttons {
+                display: flex;
+                flex-wrap: nowrap;
+            }
+            
+            .action-buttons .btn {
+                margin-right: 3px;
+                padding: 0.25rem 0.5rem;
+            }
+            
+            .action-buttons .btn i {
+                margin-right: 0;
+            }
+            
+            .action-buttons .btn span {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .main-content {
+                padding: 15px 10px;
+            }
+            
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .header h2 {
+                margin-bottom: 10px;
+            }
+            
+            .recent-table {
+                padding: 12px;
+            }
+            
+            .table th, .table td {
+                padding: 0.5rem;
+            }
+            
+            .btn-sm {
+                padding: 0.25rem 0.5rem;
+                font-size: 0.8rem;
+            }
+            
+            .book-cover {
+                width: 30px;
+                height: 42px;
+            }
+            
+            /* Adjust filter and search layout */
+            .row.mb-4 > div {
+                margin-bottom: 10px;
+            }
+            
+            /* Hide some table columns on very small screens */
+            .isbn-column, .category-column {
+                display: none;
+            }
+        }
+        
+        /* For very small devices */
+        @media (max-width: 360px) {
+            .header {
+                padding: 10px;
+            }
+            
+            .header h2 {
+                font-size: 1.3rem;
+            }
+            
+            .recent-table h5 {
+                font-size: 1.1rem;
+            }
+            
+            .table {
+                font-size: 0.8rem;
+            }
+            
+            .action-buttons .btn {
+                padding: 0.2rem 0.4rem;
+            }
+        }
+        
+        /* Improve touch targets for mobile */
+        .nav-link, .btn {
+            touch-action: manipulation;
+        }
+        
+        /* Prevent horizontal scrolling */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        /* Toggle sidebar button for mobile */
+        .sidebar-toggle {
+            display: none;
+        }
+        
+        @media (max-width: 992px) {
+            .sidebar-toggle {
+                display: inline-block;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="overlay" id="sidebarOverlay"></div>
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
-            <div class="col-md-3 col-lg-2 sidebar d-md-block">
+            <div class="col-md-3 col-lg-2 sidebar d-md-block" id="sidebar">
                 <div class="text-center mb-4">
                     <h4><i class="fas fa-book-open"></i> BiblioAdmin</h4>
                 </div>
@@ -144,7 +314,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= site_url('admin/dashboard/books') ?>">
+                        <a class="nav-link active" href="<?= site_url('admin/dashboard/books') ?>">
                             <i class="fas fa-book"></i> Livres
                         </a>
                     </li>
@@ -154,22 +324,22 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= site_url('admin/dashboard/loans')?>">
+                        <a class="nav-link" href="<?= site_url('admin/dashboard/loans') ?>">
                             <i class="fas fa-exchange-alt"></i> Emprunts
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= site_url('admin/dashboard/overdue')?>">
+                        <a class="nav-link" href="<?= site_url('admin/dashboard/overdue') ?>">
                             <i class="fas fa-clock"></i> Retards
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('admin/dashboard/settings')?>">
+                        <a class="nav-link" href="<?= base_url('admin/dashboard/settings') ?>">
                             <i class="fas fa-cog"></i> Paramètres
                         </a>
                     </li>
                     <li class="nav-item mt-4">
-                        <a class="nav-link" href="<?= site_url('logout')?>">
+                        <a class="nav-link" href="<?= site_url('logout') ?>">
                             <i class="fas fa-sign-out-alt"></i> Déconnexion
                         </a>
                     </li>
@@ -207,12 +377,15 @@
                 
                 <!-- Header -->
                 <div class="header">
-                    <h2><i class="fas fa-book me-2"></i> Gestion des Livres</h2>
                     <div class="d-flex align-items-center">
-                        <div class="user-profile d-flex align-items-center">
-                            <img src="https://ui-avatars.com/api/?name=Admin+User&background=3498db&color=fff" alt="Admin">
-                            <span>Administrateur</span>
-                        </div>
+                        <button class="btn btn-outline-secondary sidebar-toggle me-2" id="sidebarToggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <h2 class="mb-0"><i class="fas fa-book me-2"></i> Gestion des Livres</h2>
+                    </div>
+                    <div class="user-profile d-flex align-items-center">
+                        <img src="https://ui-avatars.com/api/?name=Admin+User&background=3498db&color=fff" alt="Admin">
+                        <span>Administrateur</span>
                     </div>
                 </div>
                 
@@ -220,12 +393,12 @@
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h3>Catalogue des Livres</h3>
                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addBookModal">
-                        <i class="fas fa-plus"></i> Ajouter un livre
+                        <i class="fas fa-plus"></i> <span class="d-none d-md-inline">Ajouter un livre</span>
                     </button>
                 </div>
                 
                 <div class="row mb-4">
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-2">
                         <div class="input-group">
                             <input type="text" class="form-control" id="searchInput" placeholder="Rechercher un livre par titre, auteur ou ISBN...">
                             <button class="btn btn-outline-secondary" type="button" id="searchButton">
@@ -233,7 +406,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 mb-2">
                         <select class="form-select" id="categoryFilter">
                             <option selected>Toutes les catégories</option>
                             <option>Fiction</option>
@@ -247,7 +420,7 @@
                             <option>Stratégie</option>
                         </select>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 mb-2">
                         <select class="form-select" id="sortSelect">
                             <option selected>Trier par</option>
                             <option value="title_asc">Titre (A-Z)</option>
@@ -266,8 +439,8 @@
                                     <th>Couverture</th>
                                     <th>Titre</th>
                                     <th>Auteur</th>
-                                    <th>ISBN</th>
-                                    <th>Catégorie</th>
+                                    <th class="isbn-column">ISBN</th>
+                                    <th class="category-column">Catégorie</th>
                                     <th>Disponibilité</th>
                                     <th>Actions</th>
                                 </tr>
@@ -309,8 +482,8 @@
                                         </td>
                                         <td><?= esc($book['title']) ?></td>
                                         <td><?= esc($book['author']) ?></td>
-                                        <td><?= esc($book['isbn'] ?? 'N/A') ?></td>
-                                        <td><?= esc($book['category'] ?? 'Non spécifiée') ?></td>
+                                        <td class="isbn-column"><?= esc($book['isbn'] ?? 'N/A') ?></td>
+                                        <td class="category-column"><?= esc($book['category'] ?? 'Non spécifiée') ?></td>
                                         <td>
                                             <?php if ($book['available'] > 0): ?>
                                                 <span class="badge bg-success">Disponible (<?= $book['available'] ?>)</span>
@@ -485,6 +658,28 @@
     
     <script>
         $(document).ready(function() {
+            const sidebar = $('#sidebar');
+            const overlay = $('#sidebarOverlay');
+            
+            // Sidebar toggle
+            $('#sidebarToggle').click(function(){
+                sidebar.toggleClass('active');
+                overlay.toggleClass('active');
+            });
+            
+            overlay.click(function(){
+                sidebar.removeClass('active');
+                overlay.removeClass('active');
+            });
+            
+            // Close sidebar when clicking on a link (mobile)
+            $('.sidebar .nav-link').click(function() {
+                if ($(window).width() < 992) {
+                    sidebar.removeClass('active');
+                    overlay.removeClass('active');
+                }
+            });
+            
             // Function to handle book search
             $('#searchButton').on('click', function() {
                 const searchTerm = $('#searchInput').val().toLowerCase();
@@ -517,13 +712,6 @@
                 }
             });
             
-            // Sort functionality
-            $('#sortSelect').on('change', function() {
-                const sortValue = $(this).val();
-                // Cette fonctionnalité serait mieux gérée côté serveur
-                alert('Fonctionnalité de tri à implémenter côté serveur pour: ' + sortValue);
-            });
-            
             // Clear form when modal is closed
             $('#addBookModal').on('hidden.bs.modal', function () {
                 $(this).find('form')[0].reset();
@@ -533,10 +721,20 @@
             setTimeout(function() {
                 $('.alert').alert('close');
             }, 5000);
+            
+            // Adjust table columns based on screen size
+            function adjustTableColumns() {
+                if ($(window).width() < 576) {
+                    $('.isbn-column, .category-column').hide();
+                } else {
+                    $('.isbn-column, .category-column').show();
+                }
+            }
+            
+            // Run on load and resize
+            adjustTableColumns();
+            $(window).resize(adjustTableColumns);
         });
     </script>
-
-    
-         
 </body>
 </html>

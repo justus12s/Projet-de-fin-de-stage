@@ -1,10 +1,11 @@
 <?= $this->extend('dashboard/layout') ?>
 
 <?= $this->section('content') ?>
+
 <div class="container-fluid">
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800"><?= $page_title ?></h1>
-        <a href="<?= base_url('/admin/dashboard/loans/create') ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4 flex-wrap">
+        <h1 class="h3 mb-2 mb-sm-0 text-gray-800"><?= $page_title ?></h1>
+        <a href="<?= base_url('/admin/dashboard/loans/create') ?>" class="btn btn-primary btn-sm shadow-sm w-100 w-sm-auto mb-2 mb-sm-0">
             <i class="fas fa-plus fa-sm text-white-50"></i> Nouvel Emprunt
         </a>
     </div>
@@ -114,7 +115,7 @@
             <h6 class="m-0 font-weight-bold text-primary">Filtres</h6>
         </div>
         <div class="card-body">
-            <form method="get" class="form-inline">
+            <form method="get" class="form-inline flex-wrap">
                 <div class="form-group mr-2 mb-2">
                     <input type="text" name="search" class="form-control" placeholder="Rechercher..." value="<?= $search ?>">
                 </div>
@@ -164,14 +165,14 @@
                         <?php foreach ($loans as $loan): ?>
                         <tr>
                             <td>
-                                <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-center flex-wrap">
                                     <?php if (!empty($loan['cover_image'])): ?>
                                         <img src="<?= base_url('uploads/books/' . $loan['cover_image']) ?>" 
                                             alt="Couverture" 
-                                            class="book-cover mr-3"
+                                            class="book-cover mr-3 mb-2 mb-sm-0"
                                             style="width: 40px; height: 56px; object-fit: cover; border-radius: 4px;">
                                     <?php else: ?>
-                                        <div class="book-cover-placeholder mr-3" 
+                                        <div class="book-cover-placeholder mr-3 mb-2 mb-sm-0" 
                                             style="width: 40px; height: 56px; background: #f0f0f0; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
                                             <i class="fas fa-book text-muted"></i>
                                         </div>
@@ -199,7 +200,6 @@
                                 <?php endif; ?>
                             </td>
 
-                            
                             <td>
                                 <?php
                                 $statusBadge = [
@@ -216,22 +216,19 @@
                                 </span>
                             </td>
 
-
-
-                            
                             <td>
-                                <a href="<?= base_url('/admin/dashboard/loans/view/' . $loan['id']) ?>" class="btn btn-info btn-sm" title="Voir">
+                                <a href="<?= base_url('/admin/dashboard/loans/view/' . $loan['id']) ?>" class="btn btn-info btn-sm mb-1" title="Voir">
                                     <i class="fas fa-eye"></i>
                                 </a>
                                 
                                 <?php if (in_array($loan['status'], ['active', 'overdue'])): ?>
-                                    <a href="<?= base_url('/admin/dashboard/loans/return/' . $loan['id']) ?>" class="btn btn-success btn-sm" title="Retourner" onclick="return confirm('Marquer ce livre comme retourné ?')">
+                                    <a href="<?= base_url('/admin/dashboard/loans/return/' . $loan['id']) ?>" class="btn btn-success btn-sm mb-1" title="Retourner" onclick="return confirm('Marquer ce livre comme retourné ?')">
                                         <i class="fas fa-undo"></i>
                                     </a>
                                 <?php endif; ?>
                                 
                                 <?php if ($loan['status'] === 'pending'): ?>
-                                    <a href="<?= base_url('/admin/dashboard/loans/delete/' . $loan['id']) ?>" class="btn btn-danger btn-sm" title="Annuler" onclick="return confirm('Annuler cet emprunt ?')">
+                                    <a href="<?= base_url('/admin/dashboard/loans/delete/' . $loan['id']) ?>" class="btn btn-danger btn-sm mb-1" title="Annuler" onclick="return confirm('Annuler cet emprunt ?')">
                                         <i class="fas fa-times"></i>
                                     </a>
                                 <?php endif; ?>
