@@ -1,112 +1,106 @@
 <?= $this->extend('user/layout') ?>
 
 <?= $this->section('content') ?>
-<div class="container mt-3 mt-md-4">
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-10 col-lg-8">
-            <div class="card">
-                <div class="card-header bg-primary text-white">
-                    <h4 class="mb-0"><i class="fas fa-bookmark me-2"></i>Confirmation de réservation</h4>
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="mb-0"><i class="fas fa-calendar-check me-2"></i>Mes Réservations</h4>
+        </div>
+        <div class="card-body">
+
+            <!-- Message flash -->
+            <?php if(session()->getFlashdata('success')): ?>
+                <div class="alert alert-success">
+                    <i class="fas fa-check-circle me-2"></i> <?= session()->getFlashdata('success') ?>
                 </div>
-                <div class="card-body">
-                    <!-- Image du livre -->
-                    <div class="text-center mb-4">
-                        <?php if (!empty($book['cover_image'])): ?>
-                            <img src="<?= base_url('uploads/books/' . $book['cover_image']) ?>" 
-                                 class="img-fluid rounded shadow" 
-                                 alt="Couverture de <?= esc($book['title']) ?>"
-                                 style="max-height: 200px;">
-                        <?php else: ?>
-                            <div class="bg-light rounded d-flex align-items-center justify-content-center p-4" style="height: 200px;">
-                                <i class="fas fa-book fa-4x text-muted"></i>
-                            </div>
-                        <?php endif; ?>
-                    </div>
+            <?php endif; ?>
 
-                    <!-- Titre et auteur -->
-                    <h3 class="text-center mb-2"><?= esc($book['title']) ?></h3>
-                    <p class="text-center text-muted mb-4">par <?= esc($book['author']) ?></p>
-
-                    <!-- Informations détaillées -->
-                    <div class="row mb-4">
-                        <div class="col-6 col-md-3 text-center">
-                            <div class="border rounded p-2">
-                                <i class="fas fa-calendar-alt text-primary fa-2x mb-2"></i>
-                                <h6 class="mb-1">30 jours</h6>
-                                <small class="text-muted">Durée</small>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 text-center">
-                            <div class="border rounded p-2">
-                                <i class="fas fa-flag text-success fa-2x mb-2"></i>
-                                <h6 class="mb-1"><?= date('d/m/Y', strtotime('+30 days')) ?></h6>
-                                <small class="text-muted">Retour prévu</small>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 text-center">
-                            <div class="border rounded p-2">
-                                <i class="fas fa-copy text-info fa-2x mb-2"></i>
-                                <h6 class="mb-1"><?= $book['available'] ?></h6>
-                                <small class="text-muted">Exemplaires</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Conditions de réservation -->
-                    <div class="alert alert-info">
-                        <h5><i class="fas fa-info-circle me-2"></i>Conditions de réservation</h5>
-                        <ul class="mb-0">
-                            <li>Durée de réservation : <strong>30 jours</strong></li>
-                            <li>Date de retour prévue : <strong><?= date('d/m/Y', strtotime('+30 days')) ?></strong></li>
-                            <li>Amende en cas de retard : <strong>1€ par jour de retard</strong></li>
-                            <li>Respectez les délais pour éviter les pénalités</li>
-                            <li>Prenez soin du livre réservé</li>
-                        </ul>
-                    </div>
-
-                    <!-- Actions -->
-                    <div class="text-center mt-4">
-                        <form action="<?= site_url('books/reserve/' . $book['id']) ?>" method="post">
-                            <?= csrf_field() ?>
-                            <button type="submit" class="btn btn-success btn-lg me-2 mb-2">
-                                <i class="fas fa-check me-2"></i> Confirmer la réservation
-                            </button>
-                            <a href="<?= site_url('books') ?>" class="btn btn-secondary btn-lg mb-2">
-                                <i class="fas fa-times me-2"></i> Annuler
-                            </a>
-                        </form>
-                    </div>
-
+            <?php if(session()->getFlashdata('error')): ?>
+                <div class="alert alert-danger">
+                    <i class="fas fa-exclamation-triangle me-2"></i> <?= session()->getFlashdata('error') ?>
                 </div>
-            </div>
+            <?php endif; ?>
+
+            <?php if(!empty($reservations)): ?>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>#</th>
+                                <th>Livre</th>
+                                <th>Auteur</th>
+                                <th>Date de réservation</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach($reservations as $key => $reservation): ?>
+                                <tr>
+                                    <td><?= $key + 1 ?></td>
+                                    <td><?= esc($reservation['book_title']) ?></td>
+                                    <td><?= esc($reservation['book_author']) ?></td>
+                                    <td><?= date('d/m/Y H:i', strtotime($reservation['reserved_at'])) ?></td>
+                                    <td>
+                                        <?php if($reservation['status'] == 'en_attente'): ?>
+                                            <span class="badge bg-warning">En attente</span>
+                                        <?php elseif($reservation['status'] == 'confirmé'): ?>
+                                            <span class="badge bg-success">Confirmé</span>
+                                        <?php elseif($reservation['status'] == 'annulé'): ?>
+                                            <span class="badge bg-danger">Annulé</span>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td>
+                                        <?php if($reservation['status'] == 'en_attente'): ?>
+                                            <!-- Annuler réservation -->
+                                            <a href="<?= site_url('reservations/cancel/' . $reservation['id']) ?>" 
+                                               class="btn btn-sm btn-warning mb-1"
+                                               onclick="return confirm('Voulez-vous vraiment annuler cette réservation ?')">
+                                               <i class="fas fa-times me-1"></i> Annuler
+                                            </a>
+                                        <?php endif; ?>
+
+                                        <?php if($reservation['status'] == 'annulé'): ?>
+                                            <!-- Supprimer réservation -->
+                                            <a href="<?= site_url('reservations/delete/' . $reservation['id']) ?>" 
+                                               class="btn btn-sm btn-danger mb-1"
+                                               onclick="return confirm('Voulez-vous vraiment supprimer cette réservation ?')">
+                                               <i class="fas fa-trash me-1"></i> Supprimer
+                                            </a>
+                                        <?php endif; ?>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            <?php else: ?>
+                <div class="text-center py-5">
+                    <i class="fas fa-calendar-check fa-3x text-muted mb-3"></i>
+                    <h5 class="mb-3">Vous n'avez encore réservé aucun livre</h5>
+                    <p class="text-muted mb-4">Consultez notre bibliothèque pour effectuer votre première réservation.</p>
+                    <a href="<?= site_url('books') ?>" class="btn btn-primary">
+                        <i class="fas fa-book me-2"></i> Voir les livres disponibles
+                    </a>
+                </div>
+            <?php endif; ?>
+
         </div>
     </div>
 </div>
 
 <style>
-/* Styles responsives pour la confirmation */
-.card:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.border.rounded:hover { background-color: #f8f9fa; transform: translateY(-2px); }
-.btn:hover { transform: translateY(-1px); }
+/* Styles responsives pour la table */
+@media (max-width: 768px) {
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+    .btn-sm {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+        width: 100%;
+        margin-bottom: 0.3rem;
+    }
+}
 </style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Animation pour le chargement
-    const elements = document.querySelectorAll('.border.rounded, .alert, .bg-light');
-    elements.forEach((el, i) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }, 200 + i*100);
-    });
-
-    // Confirmation avant soumission
-    const form = document.querySelector('form');
-    form.addEventListener('submit', function(e) {
-        if (!confirm('Confirmez-vous la réservation de ce livre ?')) {
-            e.preventDefault();
-        }
-    });
-});
-</script>
 <?= $this->endSection() ?>

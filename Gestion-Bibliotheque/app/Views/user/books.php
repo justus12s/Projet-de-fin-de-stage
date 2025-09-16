@@ -9,6 +9,7 @@
                     <h4 class="mb-0">Livres Disponibles</h4>
                 </div>
                 <div class="card-body">
+
                     <!-- Barre de recherche -->
                     <div class="row mb-4">
                         <div class="col-12 col-md-8 mb-3 mb-md-0">
@@ -18,10 +19,7 @@
                             <select class="form-control" id="categoryFilter">
                                 <option value="">Toutes les catégories</option>
                                 <?php 
-                                $predefinedCategories = [
-                                    'Fiction', 'Science Fiction', 'Fantasy', 'Histoire', 
-                                    'Bibliographie', 'Informatique', 'Jeunesse', 'Classiques', 'Stratégie'
-                                ];
+                                $predefinedCategories = ['Fiction','Science Fiction','Fantasy','Histoire','Bibliographie','Informatique','Jeunesse','Classiques','Stratégie'];
                                 foreach ($predefinedCategories as $cat): ?>
                                     <option value="<?= $cat ?>"><?= $cat ?></option>
                                 <?php endforeach; ?>
@@ -82,8 +80,10 @@
                                                     onclick="showBookDetails(<?= $book['id'] ?>)">
                                                 <i class="fas fa-info-circle me-1"></i> Détails
                                             </button>
+
                                             <?php if ($book['available'] > 0): ?>
-                                                <a href="<?= site_url('reservation/reserve/' . $book['id']) ?>" 
+                                                <!-- Bouton redirige vers confirmation -->
+                                                <a href="<?= site_url('books/confirm/' . $book['id']) ?>" 
                                                    class="btn btn-success btn-sm">
                                                     <i class="fas fa-bookmark me-1"></i> Réserver
                                                 </a>
@@ -138,7 +138,7 @@
 </div>
 
 <script>
-// Filtrage et recherche
+// Recherche et filtrage
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('searchInput');
     const categoryFilter = document.getElementById('categoryFilter');
@@ -150,6 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchText = searchInput.value.toLowerCase();
         const selectedCategory = categoryFilter.value;
         let visibleCount = 0;
+
         bookItems.forEach(item => {
             const title = item.querySelector('.card-title').textContent.toLowerCase();
             const author = item.querySelector('.card-text').textContent.toLowerCase();
@@ -163,6 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.style.display = 'none';
             }
         });
+
         noResults.style.display = visibleCount === 0 ? 'block' : 'none';
         booksContainer.style.display = visibleCount === 0 ? 'none' : 'flex';
     }
@@ -200,7 +202,7 @@ function showBookDetails(bookId) {
                         </div>
                         <div class="col-12 col-sm-6">
                             <strong>Disponibilité:</strong><br>
-                            <span class="${book.available > 0 ? 'text-success' : 'text-danger'} mt-1 d-block">${book.available} exemplaire(s) ${book.available > 0 ? 'disponible(s)' : 'indisponible'}</span>
+                            <span class="${book.available > 0 ? 'text-success' : 'text-danger'} mt-1 d-block">${book.available} exemplaire(s)</span>
                         </div>
                     </div>
                     <div class="book-details-grid mb-3">
@@ -211,20 +213,25 @@ function showBookDetails(bookId) {
                     ${book.description ? `<div class="mt-3 mt-md-4"><strong>Description:</strong><p class="text-muted mt-2" style="max-height: 150px; overflow-y: auto;">${book.description}</p></div>` : ''}
                 </div>
             </div>`;
+
         const modalFooter = document.querySelector('#bookModal .modal-footer');
         if (book.available > 0) {
-            modalFooter.innerHTML = `<div class="d-flex flex-column flex-md-row gap-2 w-100">
-                <a href="<?= site_url('reservation/reserve/') ?>${book.id}" class="btn btn-success flex-fill"><i class="fas fa-bookmark me-1 me-md-2"></i> Réserver ce livre</a>
-                <button type="button" class="btn btn-secondary flex-fill" data-bs-dismiss="modal"><i class="fas fa-times me-1 me-md-2"></i> Fermer</button>
-            </div>`;
+            modalFooter.innerHTML = `
+                <div class="d-flex flex-column flex-md-row gap-2 w-100">
+                    <a href="<?= site_url('books/confirm/') ?>${book.id}" class="btn btn-success flex-fill"><i class="fas fa-bookmark me-1 me-md-2"></i> Réserver ce livre</a>
+                    <button type="button" class="btn btn-secondary flex-fill" data-bs-dismiss="modal"><i class="fas fa-times me-1 me-md-2"></i> Fermer</button>
+                </div>`;
         } else {
-            modalFooter.innerHTML = `<div class="d-flex flex-column flex-md-row gap-2 w-100">
-                <button type="button" class="btn btn-outline-secondary flex-fill" data-bs-dismiss="modal"><i class="fas fa-times me-1 me-md-2"></i> Fermer</button>
-                <button class="btn btn-outline-primary flex-fill" onclick="alert('Fonctionnalité de notification à venir')"><i class="fas fa-bell me-1 me-md-2"></i> Être notifié</button>
-            </div>`;
+            modalFooter.innerHTML = `
+                <div class="d-flex flex-column flex-md-row gap-2 w-100">
+                    <button type="button" class="btn btn-outline-secondary flex-fill" data-bs-dismiss="modal"><i class="fas fa-times me-1 me-md-2"></i> Fermer</button>
+                    <button class="btn btn-outline-primary flex-fill" onclick="alert('Fonctionnalité de notification à venir')"><i class="fas fa-bell me-1 me-md-2"></i> Être notifié</button>
+                </div>`;
         }
+
         const modalElement = document.getElementById('bookModal');
         const modal = new bootstrap.Modal(modalElement);
+
         function adjustModal() {
             const dialog = modalElement.querySelector('.modal-dialog');
             if (window.innerWidth < 768) {
@@ -235,6 +242,7 @@ function showBookDetails(bookId) {
                 dialog.classList.add('modal-lg');
             }
         }
+
         adjustModal();
         window.addEventListener('resize', adjustModal);
         modal.show();
