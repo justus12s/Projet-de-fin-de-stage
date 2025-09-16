@@ -1,0 +1,458 @@
+CRITICAL - 2025-09-12 00:00:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "user/my_books.php"
+[Method: GET, Route: my-books]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/my_books.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 3 APPPATH\Controllers\UserController.php(202): view('user/my_books', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 00:01:59 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "user/my_books.php"
+[Method: GET, Route: my-books]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/my_books.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 3 APPPATH\Controllers\UserController.php(202): view('user/my_books', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 00:02:55 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "user/profile.php"
+[Method: GET, Route: profile]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/profile.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/profile', [], true)
+ 3 APPPATH\Controllers\UserController.php(176): view('user/profile', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->profile()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 00:02:55 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "user/profile.php"
+[Method: GET, Route: profile]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/profile.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/profile', [], true)
+ 3 APPPATH\Controllers\UserController.php(176): view('user/profile', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->profile()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 00:27:55 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout.php"
+[Method: GET, Route: profile]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/profile', [], true)
+ 4 APPPATH\Controllers\UserController.php(176): view('user/profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->profile()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 00:28:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout.php"
+[Method: GET, Route: profile]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/profile', [], true)
+ 4 APPPATH\Controllers\UserController.php(176): view('user/profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->profile()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 00:29:25 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout.php"
+[Method: GET, Route: profile]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/profile', [], true)
+ 4 APPPATH\Controllers\UserController.php(176): view('user/profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->profile()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 00:29:25 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout.php"
+[Method: GET, Route: profile]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/profile', [], true)
+ 4 APPPATH\Controllers\UserController.php(176): view('user/profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->profile()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 00:29:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout.php"
+[Method: GET, Route: profile]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/profile', [], true)
+ 4 APPPATH\Controllers\UserController.php(176): view('user/profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->profile()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 00:29:31 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout.php"
+[Method: GET, Route: profile]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/profile', [], true)
+ 4 APPPATH\Controllers\UserController.php(176): view('user/profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->profile()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 00:29:48 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "user/my_books.php"
+[Method: GET, Route: my-books]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/my_books.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 3 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 00:29:49 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "user/my_books.php"
+[Method: GET, Route: my-books]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/my_books.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 3 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 00:30:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout.php"
+[Method: GET, Route: profile]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/profile', [], true)
+ 4 APPPATH\Controllers\UserController.php(176): view('user/profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->profile()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 00:33:16 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "user/my_books.php"
+[Method: GET, Route: my-books]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/my_books.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 3 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 00:36:33 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout.php"
+[Method: GET, Route: profile]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/profile', [], true)
+ 4 APPPATH\Controllers\UserController.php(176): view('user/profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->profile()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 00:37:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "user/my_books.php"
+[Method: GET, Route: my-books]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/my_books.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 3 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 00:37:24 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "user/my_books.php"
+[Method: GET, Route: my-books]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/my_books.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 3 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 00:38:33 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "user/my_books.php"
+[Method: GET, Route: my-books]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/my_books.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 3 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 01:01:07 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "user/my_books.php"
+[Method: GET, Route: my-books]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/my_books.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 3 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 01:04:01 --> ErrorException: Undefined variable $data
+[Method: POST, Route: profile/update]
+in APPPATH\Controllers\UserController.php on line 208.
+ 1 APPPATH\Controllers\UserController.php(208): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\Gestion-Bibliotheque\\app\\Controllers\\UserController.php', 208)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->updateProfile()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 01:04:15 --> ErrorException: Undefined variable $data
+[Method: POST, Route: profile/update]
+in APPPATH\Controllers\UserController.php on line 208.
+ 1 APPPATH\Controllers\UserController.php(208): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\Gestion-Bibliotheque\\app\\Controllers\\UserController.php', 208)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->updateProfile()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 01:50:33 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "user/my_books.php"
+[Method: GET, Route: my-books]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/my_books.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 3 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 02:31:37 --> Error: Call to undefined method CodeIgniter\View\View::calculateDaysRemaining()
+[Method: GET, Route: my-books]
+in APPPATH\Views\user\my_books.php on line 81.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 4 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 02:31:38 --> Error: Call to undefined method CodeIgniter\View\View::calculateDaysRemaining()
+[Method: GET, Route: my-books]
+in APPPATH\Views\user\my_books.php on line 81.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 4 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 02:31:43 --> Error: Call to undefined method CodeIgniter\View\View::calculateDaysRemaining()
+[Method: GET, Route: my-books]
+in APPPATH\Views\user\my_books.php on line 81.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 4 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 02:31:43 --> Error: Call to undefined method CodeIgniter\View\View::calculateDaysRemaining()
+[Method: GET, Route: my-books]
+in APPPATH\Views\user\my_books.php on line 81.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 4 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 02:34:29 --> Error: Call to undefined method CodeIgniter\View\View::calculateDaysRemaining()
+[Method: GET, Route: my-books]
+in APPPATH\Views\user\my_books.php on line 81.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 4 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 02:35:17 --> Error: Call to undefined method CodeIgniter\View\View::calculateDaysRemaining()
+[Method: GET, Route: my-books]
+in APPPATH\Views\user\my_books.php on line 81.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 4 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 02:35:17 --> Error: Call to undefined method CodeIgniter\View\View::calculateDaysRemaining()
+[Method: GET, Route: my-books]
+in APPPATH\Views\user\my_books.php on line 81.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 4 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 02:44:40 --> Error: Call to undefined method CodeIgniter\View\View::calculateDaysRemaining()
+[Method: GET, Route: my-books]
+in APPPATH\Views\user\my_books.php on line 81.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 4 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 10:28:53 --> Error: Call to undefined method CodeIgniter\View\View::calculateDaysRemaining()
+[Method: GET, Route: my-books]
+in APPPATH\Views\user\my_books.php on line 81.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 4 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 10:28:54 --> Error: Call to undefined method CodeIgniter\View\View::calculateDaysRemaining()
+[Method: GET, Route: my-books]
+in APPPATH\Views\user\my_books.php on line 81.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 4 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 16:59:37 --> Error: Call to undefined method CodeIgniter\View\View::calculateDaysRemaining()
+[Method: GET, Route: my-books]
+in APPPATH\Views\user\my_books.php on line 81.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 4 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')
+CRITICAL - 2025-09-12 16:59:37 --> Error: Call to undefined method CodeIgniter\View\View::calculateDaysRemaining()
+[Method: GET, Route: my-books]
+in APPPATH\Views\user\my_books.php on line 81.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/my_books', [], true)
+ 4 APPPATH\Controllers\UserController.php(247): view('user/my_books', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->myBooks()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Bibliotheque\\public\\index.php')

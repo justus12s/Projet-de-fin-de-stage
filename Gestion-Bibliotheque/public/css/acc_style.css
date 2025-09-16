@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background-attachment: fixed;
+}
+.card {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+.avis {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba(106,17,203,0.08);
+    padding: 24px;
+    min-height: 220px;
+}
+.sign {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 12px rgba(106,17,203,0.08);
+}
+.inscrit {
+    background: #fff;
+    color: #6a11cb;
+    font-weight: bold;
+    border-radius: 1.5rem;
+    padding: 12px 32px;
+    margin-top: 12px;
+    transition: background 0.2s, color 0.2s;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+}
+.inscrit:hover {
+    background: #2575fc;
+    color: #fff;
+}
+@media (max-width: 600px) {
+    .card-img-top {
+        height: 140px;
+    }
+}
