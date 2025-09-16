@@ -194,5 +194,6 @@ CREATE TABLE loans (
 **12/09/2025 au 14/09/2025**
 
 - Mise en forme Responsive de l'interface Uitlisateur ...
+- Mise en forme Responsive de l'interface Administrateur ...
 
 **Contributeur de ces modifications : Abel KPOKOUTA**
